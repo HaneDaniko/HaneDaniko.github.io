@@ -1,0 +1,981 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 8.1.2">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/icon.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/icon.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha256-VHqXKFhhMxcpubYf9xiWdCiojEbY9NexQ4jh8AxbvcM=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/5.0.31/fancybox/fancybox.css" integrity="sha256-gkQVf8UKZgQ0HyuxL/VnacadJ+D2Kox2TCEBuNQg5+w=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Mist","darkmode":true,"version":"8.28.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"language":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js" defer></script>
+
+    <meta name="description" content="迁移自cnblog博客">
+<meta property="og:type" content="article">
+<meta property="og:title" content="数学与推论证明1">
+<meta property="og:url" content="http://example.com/2024/03/22/2024-03-22-%5BOI%5D%E6%95%B0%E5%AD%A6%E4%B8%8E%E6%8E%A8%E8%AE%BA%E8%AF%81%E6%98%8E1/index.html">
+<meta property="og:site_name" content="HaneDaCafe">
+<meta property="og:description" content="迁移自cnblog博客">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2024-03-22T13:21:00.000Z">
+<meta property="article:modified_time" content="2026-07-05T04:00:43.594Z">
+<meta property="article:author" content="HaneDaniko">
+<meta property="article:tag" content="数学">
+<meta property="article:tag" content="理论">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://example.com/2024/03/22/2024-03-22-%5BOI%5D%E6%95%B0%E5%AD%A6%E4%B8%8E%E6%8E%A8%E8%AE%BA%E8%AF%81%E6%98%8E1/">
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://example.com/2024/03/22/2024-03-22-%5BOI%5D%E6%95%B0%E5%AD%A6%E4%B8%8E%E6%8E%A8%E8%AE%BA%E8%AF%81%E6%98%8E1/","path":"2024/03/22/2024-03-22-[OI]数学与推论证明1/","title":"数学与推论证明1"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>数学与推论证明1 | HaneDaCafe</title>
+  
+
+
+
+
+
+
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/5.0.31/fancybox/fancybox.umd.js" integrity="sha256-a+H7FYzJv6oU2hfsfDGM2Ohw/cR9v+hPfxHCLdmCrE8=" crossorigin="anonymous" defer></script>
+<script src="/js/utils.js" defer></script><script src="/js/motion.js" defer></script><script src="/js/sidebar.js" defer></script><script src="/js/next-boot.js" defer></script>
+
+  
+
+
+
+  <script src="/js/third-party/fancybox.js" defer></script>
+
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/js/third-party/math/mathjax.js" defer></script>
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">HaneDaCafe</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>目录</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+  </ul>
+</nav>
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Contest"><span class="nav-number">1.</span> <span class="nav-text">Contest</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E6%83%85%E6%8F%90%E8%A6%81"><span class="nav-number">2.</span> <span class="nav-text">前情提要</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E6%95%B0%E8%AE%BA%E5%AE%9A%E4%B9%89"><span class="nav-number">3.</span> <span class="nav-text">1.数论定义</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-%E7%A7%AF%E6%80%A7%E5%87%BD%E6%95%B0%E4%B8%8E%E6%95%B0%E8%AE%BA%E5%8A%A0%E6%80%A7%E5%87%BD%E6%95%B0"><span class="nav-number">3.1.</span> <span class="nav-text">1.1 积性函数与数论加性函数</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-1-1-%E6%A6%82%E8%BF%B0"><span class="nav-number">3.1.1.</span> <span class="nav-text">1.1.1 概述</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-1-2-%E7%A7%AF%E6%80%A7%E5%87%BD%E6%95%B0%E7%9A%84%E6%80%A7%E8%B4%A8"><span class="nav-number">3.1.2.</span> <span class="nav-text">1.1.2 积性函数的性质</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E6%95%B4%E9%99%A4"><span class="nav-number">4.</span> <span class="nav-text">2.整除</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-%E6%A6%82%E8%BF%B0"><span class="nav-number">4.1.</span> <span class="nav-text">2.1 概述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-%E6%95%B4%E9%99%A4%E6%8E%A8%E8%AE%BA"><span class="nav-number">4.2.</span> <span class="nav-text">2.2 整除推论</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-%E6%9C%80%E5%A4%A7%E5%85%AC%E7%BA%A6%E6%95%B0%E4%B8%8E%E6%9C%80%E5%B0%8F%E5%85%AC%E5%80%8D%E6%95%B0"><span class="nav-number">5.</span> <span class="nav-text">3.最大公约数与最小公倍数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-%E6%9C%80%E5%A4%A7%E5%85%AC%E7%BA%A6%E6%95%B0%E6%A6%82%E8%BF%B0"><span class="nav-number">5.1.</span> <span class="nav-text">3.1 最大公约数概述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-%E8%A3%B4%E8%9C%80%E5%AE%9A%E7%90%86"><span class="nav-number">5.2.</span> <span class="nav-text">3.2 裴蜀定理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3-%E6%AC%A7%E5%87%A0%E9%87%8C%E5%BE%97%E7%AE%97%E6%B3%95-%E8%BE%97%E8%BD%AC%E7%9B%B8%E9%99%A4%E6%B3%95"><span class="nav-number">5.3.</span> <span class="nav-text">3.3 欧几里得算法 (辗转相除法)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-4-%E6%9B%B4%E7%9B%B8%E5%87%8F%E6%8D%9F%E6%9C%AF"><span class="nav-number">5.4.</span> <span class="nav-text">3.4 更相减损术</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-5-%E6%89%A9%E5%B1%95%E6%AC%A7%E5%87%A0%E9%87%8C%E5%BE%97%E7%AE%97%E6%B3%95"><span class="nav-number">5.5.</span> <span class="nav-text">3.5 扩展欧几里得算法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-6-%E6%B1%82%E8%A3%B4%E8%9C%80%E7%AD%89%E5%BC%8F%E6%9C%80%E5%B0%8F%E6%AD%A3%E8%A7%A3"><span class="nav-number">5.6.</span> <span class="nav-text">3.6 求裴蜀等式最小正解</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-7-%E6%89%A9%E5%B1%95%E6%AC%A7%E5%87%A0%E9%87%8C%E5%BE%97%E7%AE%97%E6%B3%95%E8%A7%A3%E4%B8%80%E8%88%AC%E8%A3%B4%E8%9C%80%E7%AD%89%E5%BC%8F"><span class="nav-number">5.7.</span> <span class="nav-text">3.7 扩展欧几里得算法解一般裴蜀等式</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-%E7%B4%A0%E6%95%B0"><span class="nav-number">6.</span> <span class="nav-text">4.素数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1-%E6%A6%82%E8%BF%B0"><span class="nav-number">6.1.</span> <span class="nav-text">4.1 概述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-2-%E7%AE%97%E6%9C%AF%E5%9F%BA%E6%9C%AC%E5%AE%9A%E7%90%86"><span class="nav-number">6.2.</span> <span class="nav-text">4.2 算术基本定理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-3-%E8%B4%A8%E5%9B%A0%E6%95%B0%E5%88%86%E8%A7%A3"><span class="nav-number">6.3.</span> <span class="nav-text">4.3 质因数分解</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-4-%E6%AC%A7%E6%8B%89%E5%87%BD%E6%95%B0"><span class="nav-number">6.4.</span> <span class="nav-text">4.4 欧拉函数</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#4-4-1-%E6%A6%82%E8%BF%B0"><span class="nav-number">6.4.1.</span> <span class="nav-text">4.4.1 概述</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-4-2-%E6%AC%A7%E6%8B%89%E5%87%BD%E6%95%B0%E7%9A%84%E6%80%A7%E8%B4%A8"><span class="nav-number">6.4.2.</span> <span class="nav-text">4.4.2 欧拉函数的性质</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-4-3-%E5%85%B3%E4%BA%8E%E6%AC%A7%E6%8B%89%E5%87%BD%E6%95%B0%E7%9A%84%E6%8E%A8%E8%AE%BA"><span class="nav-number">6.4.3.</span> <span class="nav-text">4.4.3 关于欧拉函数的推论</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-4-4-%E6%AC%A7%E6%8B%89%E7%AD%9B"><span class="nav-number">6.4.4.</span> <span class="nav-text">4.4.4 欧拉筛</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-5-%E7%BA%A6%E6%95%B0%E4%B8%AA%E6%95%B0%E5%87%BD%E6%95%B0"><span class="nav-number">6.5.</span> <span class="nav-text">4.5 约数个数函数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-%E5%90%8C%E4%BD%99"><span class="nav-number">7.</span> <span class="nav-text">5.同余</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#5-1-%E6%A6%82%E8%BF%B0"><span class="nav-number">7.1.</span> <span class="nav-text">5.1 概述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-2-%E8%B4%B9%E9%A9%AC%E5%B0%8F%E5%AE%9A%E7%90%86"><span class="nav-number">7.2.</span> <span class="nav-text">5.2 费马小定理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-3-%E7%BA%BF%E6%80%A7%E5%90%8C%E4%BD%99%E6%96%B9%E7%A8%8B"><span class="nav-number">7.3.</span> <span class="nav-text">5.3 线性同余方程</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#5-3-1-%E4%B9%98%E6%B3%95%E9%80%86%E5%85%83"><span class="nav-number">7.3.1.</span> <span class="nav-text">5.3.1 乘法逆元</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-3-2-%E7%BA%BF%E6%80%A7%E5%90%8C%E4%BD%99%E6%96%B9%E7%A8%8B"><span class="nav-number">7.3.2.</span> <span class="nav-text">5.3.2 线性同余方程</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-4-%E4%B8%AD%E5%9B%BD%E5%89%A9%E4%BD%99%E5%AE%9A%E7%90%86"><span class="nav-number">7.4.</span> <span class="nav-text">5.4 中国剩余定理</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-%E6%8E%92%E5%88%97%E4%B8%8E%E7%BB%84%E5%90%88"><span class="nav-number">8.</span> <span class="nav-text">6.排列与组合</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#6-1-%E6%A6%82%E8%BF%B0"><span class="nav-number">8.1.</span> <span class="nav-text">6.1 概述</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#6-1-1-%E4%BA%8C%E9%A1%B9%E5%BC%8F%E5%AE%9A%E7%90%86"><span class="nav-number">8.1.1.</span> <span class="nav-text">6.1.1 二项式定理</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-2-%E5%BF%AB%E9%80%9F%E7%BB%84%E5%90%88%E6%95%B0%E6%B1%82%E6%B3%95"><span class="nav-number">8.2.</span> <span class="nav-text">6.2 快速组合数求法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#6-2-1-Lucas-%E5%AE%9A%E7%90%86"><span class="nav-number">8.2.1.</span> <span class="nav-text">6.2.1 Lucas 定理</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0%E5%88%97"><span class="nav-number">9.</span> <span class="nav-text">7.斐波那契数列</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#7-1-%E6%95%B4%E9%99%A4%E6%8E%A8%E8%AE%BA"><span class="nav-number">9.1.</span> <span class="nav-text">7.1 整除推论</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-2-%E7%BA%A6%E6%95%B0%E6%8E%A8%E8%AE%BA"><span class="nav-number">9.2.</span> <span class="nav-text">7.2 约数推论</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-3-%E5%B9%B3%E6%96%B9%E5%92%8C%E6%8E%A8%E8%AE%BA"><span class="nav-number">9.3.</span> <span class="nav-text">7.3 平方和推论</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-4-%E9%80%9A%E9%A1%B9%E5%85%AC%E5%BC%8F"><span class="nav-number">9.4.</span> <span class="nav-text">7.4 通项公式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-5-%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E9%97%B4%E9%A1%B9%E7%A7%AF%E4%B8%8E%E4%B8%AD%E9%A1%B9%E5%B9%B3%E6%96%B9%E7%9A%84%E5%85%B3%E7%B3%BB"><span class="nav-number">9.5.</span> <span class="nav-text">7.5 斐波那契间项积与中项平方的关系</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-6-%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E5%90%8C%E6%AF%94"><span class="nav-number">9.6.</span> <span class="nav-text">7.6 斐波那契同比</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-7-%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E9%BB%84%E9%87%91%E5%85%AC%E6%AF%94"><span class="nav-number">9.7.</span> <span class="nav-text">7.7 斐波那契黄金公比</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-%E5%AF%BC%E6%95%B0%E4%B8%8E%E7%A7%AF%E5%88%86"><span class="nav-number">10.</span> <span class="nav-text">8.导数与积分</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#8-1-%E5%AF%BC%E6%95%B0"><span class="nav-number">10.1.</span> <span class="nav-text">8.1 导数</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#8-1-1-%E5%AF%BC%E6%95%B0%E7%9A%84%E6%84%8F%E4%B9%89"><span class="nav-number">10.1.1.</span> <span class="nav-text">8.1.1 导数的意义</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#8-1-2-%E5%9F%BA%E6%9C%AC%E5%AF%BC%E6%95%B0%E5%85%AC%E5%BC%8F"><span class="nav-number">10.1.2.</span> <span class="nav-text">8.1.2 基本导数公式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#8-1-3-%E5%88%9D%E7%AD%89%E5%87%BD%E6%95%B0%E5%AF%BC%E6%95%B0%E5%85%AC%E5%BC%8F"><span class="nav-number">10.1.3.</span> <span class="nav-text">8.1.3 初等函数导数公式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#8-1-4-%E5%8F%8D%E5%87%BD%E6%95%B0%E5%85%AC%E5%BC%8F"><span class="nav-number">10.1.4.</span> <span class="nav-text">8.1.4 反函数公式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#8-1-5-%E5%A4%8D%E5%90%88%E5%87%BD%E6%95%B0%E5%AF%BC%E6%95%B0%E5%85%AC%E5%BC%8F"><span class="nav-number">10.1.5.</span> <span class="nav-text">8.1.5 复合函数导数公式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#8-1-6-%E7%89%9B%E9%A1%BF%E8%8E%B1%E5%B8%83%E5%B0%BC%E8%8C%A8%E5%85%AC%E5%BC%8F"><span class="nav-number">10.1.6.</span> <span class="nav-text">8.1.6 牛顿莱布尼茨公式</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-2-%E7%A7%AF%E5%88%86"><span class="nav-number">10.2.</span> <span class="nav-text">8.2 积分</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#8-2-1-%E5%AE%9A%E4%B9%89"><span class="nav-number">10.2.1.</span> <span class="nav-text">8.2.1 定义</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#8-2-2-%E5%9F%BA%E6%9C%AC%E5%AE%9A%E7%90%86"><span class="nav-number">10.2.2.</span> <span class="nav-text">8.2.2 基本定理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#8-2-3-%E7%AE%97%E6%9C%AF%E5%AE%9A%E7%90%86"><span class="nav-number">10.2.3.</span> <span class="nav-text">8.2.3 算术定理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#8-2-4-%E6%8D%A2%E5%85%83%E6%B3%95"><span class="nav-number">10.2.4.</span> <span class="nav-text">8.2.4 换元法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#8-2-5-%E9%80%86%E5%9F%BA%E6%9C%AC%E5%AE%9A%E7%90%86"><span class="nav-number">10.2.5.</span> <span class="nav-text">8.2.5 逆基本定理</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9-%E8%8E%AB%E6%AF%94%E4%B9%8C%E6%96%AF%E5%87%BD%E6%95%B0%E4%B8%8E%E8%8E%AB%E6%AF%94%E4%B9%8C%E6%96%AF%E5%8F%8D%E6%BC%94"><span class="nav-number">11.</span> <span class="nav-text">9. 莫比乌斯函数与莫比乌斯反演</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#9-1-%E8%8E%AB%E6%AF%94%E4%B9%8C%E6%96%AF%E5%87%BD%E6%95%B0"><span class="nav-number">11.1.</span> <span class="nav-text">9.1 莫比乌斯函数</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#9-1-1-%E5%AE%9A%E4%B9%89"><span class="nav-number">11.1.1.</span> <span class="nav-text">9.1.1 定义</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#9-1-2-%E6%80%A7%E8%B4%A8"><span class="nav-number">11.1.2.</span> <span class="nav-text">9.1.2 性质</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-2-%E8%8E%AB%E6%AF%94%E4%B9%8C%E6%96%AF%E5%8F%8D%E6%BC%94"><span class="nav-number">11.2.</span> <span class="nav-text">9.2 莫比乌斯反演</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#9-2-1-%E4%B8%8D%E5%AE%8C%E5%85%A8%E7%BB%93%E8%AE%BA"><span class="nav-number">11.2.1.</span> <span class="nav-text">9.2.1 不完全结论</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#9-2-2-%E5%AE%8C%E5%85%A8%E7%BB%93%E8%AE%BA"><span class="nav-number">11.2.2.</span> <span class="nav-text">9.2.2 完全结论</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#10-%E5%AE%B9%E6%96%A5%E5%8E%9F%E7%90%86%E6%8B%93%E5%B1%95"><span class="nav-number">12.</span> <span class="nav-text">10.容斥原理拓展</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#10-1-%E4%BA%8C%E9%A1%B9%E5%BC%8F%E5%8F%8D%E6%BC%94"><span class="nav-number">12.1.</span> <span class="nav-text">10.1 二项式反演</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10-2-Min-Max-%E5%AE%B9%E6%96%A5"><span class="nav-number">12.2.</span> <span class="nav-text">10.2 Min-Max 容斥</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10-3-%E9%94%99%E4%BD%8D%E6%8E%92%E5%88%97"><span class="nav-number">12.3.</span> <span class="nav-text">10.3 错位排列</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#10-3-1-%E5%85%AC%E5%BC%8F"><span class="nav-number">12.3.1.</span> <span class="nav-text">10.3.1 公式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#10-3-2-%E9%80%92%E6%8E%A8%E5%BC%8F"><span class="nav-number">12.3.2.</span> <span class="nav-text">10.3.2 递推式</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10-4-Catalan-%E6%95%B0"><span class="nav-number">12.4.</span> <span class="nav-text">10.4 Catalan 数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#11-%E5%88%9D%E7%AD%89%E5%87%BD%E6%95%B0%E6%8B%93%E5%B1%95"><span class="nav-number">13.</span> <span class="nav-text">11.初等函数拓展</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#11-1-%E5%8F%8C%E6%9B%B2%E4%B8%89%E8%A7%92%E5%87%BD%E6%95%B0"><span class="nav-number">13.1.</span> <span class="nav-text">11.1 双曲三角函数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#12-%E6%9E%81%E9%99%90"><span class="nav-number">14.</span> <span class="nav-text">12.极限</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#12-1-%E5%AE%9A%E4%B9%89%E4%B8%8E%E6%B1%82%E6%B3%95"><span class="nav-number">14.1.</span> <span class="nav-text">12.1 定义与求法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#aleph-%E6%9D%82%E9%A1%B9"><span class="nav-number">15.</span> <span class="nav-text">$\aleph$. 杂项</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#aleph-1-%E5%B9%B3%E6%96%B9%E6%95%B0%E6%A8%A1%E6%84%8F%E4%B9%89%E4%B8%8B%E7%9A%84%E7%89%B9%E6%AE%8A%E6%80%A7%E8%B4%A8"><span class="nav-number">15.1.</span> <span class="nav-text">$\aleph$.1 平方数模意义下的特殊性质</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#aleph-2-%E8%B0%83%E5%92%8C%E7%BA%A7%E6%95%B0%E7%9A%84%E5%8F%91%E6%95%A3%E6%80%A7"><span class="nav-number">15.2.</span> <span class="nav-text">$\aleph$.2 调和级数的发散性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#aleph-3-%E6%A8%A1%E6%84%8F%E4%B9%89%E6%A6%82%E7%8E%87"><span class="nav-number">15.3.</span> <span class="nav-text">$\aleph$.3 模意义概率</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="HaneDaniko"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">HaneDaniko</p>
+  <div class="site-description" itemprop="description">愿此行，终抵群星</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">3</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/HaneDaniko" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;HaneDaniko" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="/hanedaniko@qq.com" title="E-Mail → hanedaniko@qq.com" rel="noopener me"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/03/22/2024-03-22-%5BOI%5D%E6%95%B0%E5%AD%A6%E4%B8%8E%E6%8E%A8%E8%AE%BA%E8%AF%81%E6%98%8E1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="HaneDaniko">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="HaneDaCafe">
+      <meta itemprop="description" content="愿此行，终抵群星">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="数学与推论证明1 | HaneDaCafe">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          数学与推论证明1
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2024-03-22 21:21:00" itemprop="dateCreated datePublished" datetime="2024-03-22T21:21:00+08:00">2024-03-22</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2026-07-05 12:00:43" itemprop="dateModified" datetime="2026-07-05T12:00:43+08:00">2026-07-05</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%95%B0%E5%AD%A6/" itemprop="url" rel="index"><span itemprop="name">数学</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p><em>迁移自<a target="_blank" rel="noopener" href="https://www.cnblogs.com/HaneDaCafe/articles/18089562">cnblog</a>博客</em></p>
+<span id="more"></span>
+
+<h2 id="Contest"><a href="#Contest" class="headerlink" title="Contest"></a>Contest</h2><p>本博客更新很慢，有时候你会碰到施工现场（半成品草稿），是正常现象</p>
+<p>$1$. 数论定义</p>
+<p>$2$. 整除</p>
+<p>$3$. 最大公约数与最小公倍数</p>
+<p>$4$. 素数</p>
+<p>$5$. 同余</p>
+<p>$6$. 排列与组合</p>
+<p>$7$. 斐波那契数列</p>
+<p>$8$. 导数与积分</p>
+<p>$9$. 莫比乌斯函数与莫比乌斯反演</p>
+<p>$10$. 容斥原理拓展</p>
+<p>$11$. 初等函数拓展</p>
+<p>$12$. 极限</p>
+<p>$\aleph$. 杂项</p>
+<h2 id="前情提要"><a href="#前情提要" class="headerlink" title="前情提要"></a>前情提要</h2><p>信息学数论也是数学内容，涉及繁杂的数学推理与证明过程，以下为了简明文章内容，说明如下.</p>
+<ol>
+<li><p>“证明过程如下” 替换为 “$P.(id)$”.</p>
+</li>
+<li><p>“实现代码如下” 替换为 “$Program$”，并将代码折叠.</p>
+</li>
+<li><p>上文提到的函数，定理等直接列出，必要处指出定义章节.</p>
+</li>
+<li><p>博客排布不等于撰写顺序，需要时会添加.</p>
+</li>
+</ol>
+<h2 id="1-数论定义"><a href="#1-数论定义" class="headerlink" title="1.数论定义"></a>1.数论定义</h2><h3 id="1-1-积性函数与数论加性函数"><a href="#1-1-积性函数与数论加性函数" class="headerlink" title="1.1 积性函数与数论加性函数"></a>1.1 积性函数与数论加性函数</h3><h4 id="1-1-1-概述"><a href="#1-1-1-概述" class="headerlink" title="1.1.1 概述"></a>1.1.1 概述</h4><p>若函数 $f(x)$ 满足 $f(1)&#x3D;1$，且对于任意互质的自然数 $x,y$，都有 $f(xy)&#x3D;f(x)f(y)$，则 $f(x)$ 为积性函数.</p>
+<p>若函数 $f(x)$ 满足 $f(1)&#x3D;1$，且对于任意自然数 $x,y$，都有 $f(xy)&#x3D;f(x)f(y)$，则 $f(x)$ 为完全积性函数.</p>
+<p>若函数 $f(x)$ 对于任意互质的整数 $x,y$，都有 $f(xy)&#x3D;f(x)+f(y)$，则 $f(x)$ 为数论加性函数.</p>
+<h4 id="1-1-2-积性函数的性质"><a href="#1-1-2-积性函数的性质" class="headerlink" title="1.1.2 积性函数的性质"></a>1.1.2 积性函数的性质</h4><p>$No.1121$ 若 $f(x),g(x)$ 为积性函数，则以下函数为积性函数:</p>
+<p>$$f(x^{p})$$<br>$$f^{p}(x)$$<br>$$f(x)g(x)$$</p>
+<h2 id="2-整除"><a href="#2-整除" class="headerlink" title="2.整除"></a>2.整除</h2><h3 id="2-1-概述"><a href="#2-1-概述" class="headerlink" title="2.1 概述"></a>2.1 概述</h3><p>若存在整数 $c$，使 $a&#x3D;bc$，则有 $b$ 整除 $a$，记作 $b\mid a$，否则 $b \nmid a$.</p>
+<p>$No.211$ 若 $a\mid b,b\mid c$ ，则 $a\mid c$.</p>
+<p>$No.212$ 若 $b\mid a,b\mid c$，则 $b\mid (a \pm c)$.</p>
+<p>$No.213$ 若 $b\mid a$，则有 $a&#x3D;0$ 或 $|a|&#x3D;|b|$.</p>
+<p>$No.214(fromNo.213)$ 若 $\mid b,b\mid a$，则 $a&#x3D;b$.</p>
+<p>此外，对于一些特殊的数，满足:</p>
+<p>$No.215$ 若 $k\in N_{+}$，则 $p^{k}-q^{k}&#x3D;(p-q)(p^{n-1}+p^{n-2}q+…+pq^{n-2}+q^{n-1})$，即 $(p-q)\mid (p^{k}-q^{k})$.</p>
+<p>$No.216(fromNo.215)$ 若 $k\in N_{+}$，则 $(p-1)\mid (p^{k}-1)$.</p>
+<p>$No.217$ 若 $k$ 为正奇数，则 $(x+y)\mid (x^{k}+y^{k})$.</p>
+<h3 id="2-2-整除推论"><a href="#2-2-整除推论" class="headerlink" title="2.2 整除推论"></a>2.2 整除推论</h3><p>$No.221$ $S(n)$ 表示 $n$ 的各个数位数字之和，则 $9\mid n$ 的充分必要条件为 $9\mid S(n)$.</p>
+<p>$$P.221$$</p>
+<p>设 $n&#x3D;a_{k}\times 10^{k}+…+a_{1}\times 10+a_{0}$，则 $S(n)&#x3D;a_{k}+…+a_{0}$. 那么 $n-S(n)&#x3D;a_{k}(10^{k}-1)+…+a_{1}(10-1)$，该式每一项均是 $9$ 的倍数，得证.</p>
+<h2 id="3-最大公约数与最小公倍数"><a href="#3-最大公约数与最小公倍数" class="headerlink" title="3.最大公约数与最小公倍数"></a>3.最大公约数与最小公倍数</h2><h3 id="3-1-最大公约数概述"><a href="#3-1-最大公约数概述" class="headerlink" title="3.1 最大公约数概述"></a>3.1 最大公约数概述</h3><p>定义 $(x,y)$ 为 $x,y$ 的最大公约数. $(x,y)$定义为 满足 $x \mid k$ 且 $y \mid k$ 的 $k$ 的最大值.</p>
+<p>$No.311$ $(x,y)&#x3D;(-x,y)&#x3D;(x,-y)$</p>
+<p>$No.312$ $(x,y)&#x3D;(y,x)$</p>
+<p>$No.313$ $(x,y)&#x3D;(x,y+ax)\ (a\in Z)$</p>
+<p>$$P.313$$</p>
+<p>设 $(a,b)&#x3D;k$，有 $k\mid ax+b\ (x\in Z)$，则 $k$ 为 $(a,b+ax)$ 的一个公约数.</p>
+<p>假设 $(a,b+ax)&gt;k$，即 $(a,b+ax)&#x3D;k+m\ (m&gt;0)$，有 $k+m\mid a,k+m\mid b+ax,k+m\mid ax$，则 $k+m\mid b$，有 $(a,b)&#x3D;k+m$，假设不成立. 故 $(a,b)&#x3D;(a,b+ax)$.</p>
+<p>$No.314$ 若 $(a,b)&#x3D;c,d\mid a,d\mid b$，则 $(\frac{a}{d},\frac{b}{d})&#x3D;\frac{c}{d}$.</p>
+<p>$$P.314$$</p>
+<p>若 $d\mid a,d\mid b$，说明 $a,b$ 有公因子 $d$，由最大公约数定义，$d\mid c$，将该因子除去，$c$ 也相应减少一个因子 $d$.</p>
+<h3 id="3-2-裴蜀定理"><a href="#3-2-裴蜀定理" class="headerlink" title="3.2 裴蜀定理"></a>3.2 裴蜀定理</h3><p>$No.321$ 若 $a,b$ 不全为 $0$，则对任意整数 $x,y$，有 $(a,b)\mid ax+by$.</p>
+<p>$No.322$ 若 $a,b$ 不全为 $0$，则存在整数 $x,y$，使 $ax+by&#x3D;(a,b)$.</p>
+<p>$$P.322$$</p>
+<p>不妨设 $d\le b,\ (a,b)&#x3D;d$.</p>
+<p>可得 $d\mid ax+by$.</p>
+<p>令 $s$ 为 $ax+by$ 的最小正值，令 $a&#x3D;sq+r$，有 $r&#x3D;a\ mod\ s&#x3D;a-q(ax+by)&#x3D;a(1-qx)+b(-qy)$.</p>
+<p>由 $r&#x3D;a\ mod\ s$，得 $0\le r &lt; s$，但因 $s$ 为 $ax+by$ 的最小正值，不可能存在满足 $ax+by$ 的更小的正数，而 $r&#x3D;a(1-qx)+b(-qy)$ 恰好为 $ax+by$ 的形式，因此只能令 $r&#x3D;0$. 所以 $s$ 是 $a,b$ 的一个公约数. 可以得到 $d\mid s$.</p>
+<p>我们知道，两个数的公约数一定不大于它们的最大公约数，而 $d\mid s$ 又要求 $d\le s$. 因此只能令 $d&#x3D;s$. 得证.</p>
+<p>$No.323 (from No.322)$ 若 $a,b$ 不全为 $0$，且有正数 $d$ 满足 $a\mid d$ 且 $b\mid d$. 若存在整数 $x,y$ 满足 $ax+by&#x3D;d$，则 $d&#x3D;(a,b)$.</p>
+<p>$No.324(fromNo.322)$ 若 $a,b$ 不全为 $0$，则存在整数 $x,y,d$，使 $ax+by&#x3D;d$ 有解的充要条件为 $(a,b)\mid d$.</p>
+<h3 id="3-3-欧几里得算法-辗转相除法"><a href="#3-3-欧几里得算法-辗转相除法" class="headerlink" title="3.3 欧几里得算法 (辗转相除法)"></a>3.3 欧几里得算法 (辗转相除法)</h3><p>欧几里得算法主要用于求 $(a,b)$ 的值，所用的原理可以表示如下:</p>
+<p>$No.331$ $(x,y)&#x3D;(y,x\ mod\ y)\ (x&gt;y)$.</p>
+<p>$$P.331$$</p>
+<p>不妨设 $x&gt;y$.</p>
+<p>将 $x$ 拆成两部分: 一部分为 $y$ 的整倍数，另一部分为余下部分，可以得出，余下部分最小为 $x\ mod\ y$.</p>
+<p>那么令 $x&#x3D;ky+x\ mod\ y\ (k\in Z)$，定义正整数 $d$ 满足 $d\mid x$ 且 $d\mid y$.</p>
+<p>移项，$x\ mod\ y&#x3D;x-ky$，则有 $\frac{x\ mod\ y}{d}&#x3D;\frac{x}{d}-\frac{ky}{d}$. 由前方证得等式左方两项均为整数，则等式右方也为整数，那么 $d\mid x\ mod\ y$.</p>
+<p>可得 $(y,x\ mod\ y)&#x3D;d$，得证.</p>
+<details>
+<summary>$Program$</summary>
+
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">gcd</span><span class="params">(<span class="type">int</span> a,<span class="type">int</span> b)</span></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(b == <span class="number">0</span>) <span class="keyword">return</span> a;</span><br><span class="line">	<span class="keyword">return</span> <span class="built_in">gcd</span>(b,a%b);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</details>
+
+<h3 id="3-4-更相减损术"><a href="#3-4-更相减损术" class="headerlink" title="3.4 更相减损术"></a>3.4 更相减损术</h3><p>更相减损术是一种用加减法代替乘除法求最大公约数的过程，利用原理为 $No.313$. 同时，这种方法还有一种优化策略:</p>
+<p>$No.341(fromNo.314)$ 若 $2\mid a,2\mid b$，则 $(a,b)&#x3D;\frac{1}{2}(\frac{a}{2},\frac{b}{2})$.</p>
+<p>$No.342$ 若 $2\mid a,2\nmid b$，则 $(a,b)&#x3D;(\frac{a}{2},b)$.</p>
+<p>$$P.342$$</p>
+<p>$2\nmid b$ 说明两者无公因子 $2$，说明将该因子除去不影响结果.</p>
+<h3 id="3-5-扩展欧几里得算法"><a href="#3-5-扩展欧几里得算法" class="headerlink" title="3.5 扩展欧几里得算法"></a>3.5 扩展欧几里得算法</h3><p>扩展欧几里得算法可以求出裴蜀方程 $ax+by&#x3D;(a,b)$ 的一组解.</p>
+<p>$$P.35$$</p>
+<p>GPT 证的，不保证正确性</p>
+<p>欧几里得算法（Euclidean algorithm）是一种用来计算两个整数的最大公约数（Greatest Common Divisor, GCD）的算法。它不仅限于求解两个整数的最大公约数，还可以用于求解任意两个整数a和b的扩展欧几里得方程（Extended Euclidean Algorithm, ExGCD）：</p>
+<p>$ax + by &#x3D; \text{gcd}(a, b)$</p>
+<p>其中，$\text{gcd}(a, b)$ 是 a 和 b 的最大公约数。</p>
+<p><strong>证明过程</strong></p>
+<ol>
+<li><p><strong>基本步骤</strong>：</p>
+<ul>
+<li>如果 $a &#x3D; b$，则 $\text{gcd}(a, b) &#x3D; a &#x3D; b$，此时直接返回 $x &#x3D; 1, y &#x3D; 0$。</li>
+<li>如果 $a &gt; b$，那么可以将问题转化为求 $\text{gcd}(b, a \mod b)$，然后递归调用这个函数。</li>
+</ul>
+</li>
+<li><p><strong>递归过程</strong>：</p>
+<ul>
+<li>假设我们已经知道 $\text{gcd}(a, b) &#x3D; d$，并且找到了一组整数 $x_1$ 和 $y_1$ 满足 $ax_1 + by_1 &#x3D; d$。</li>
+<li>现在考虑 $\text{gcd}(a’, b’)$，其中 $a’ &#x3D; b, b’ &#x3D; a \mod b$。根据基本步骤，我们知道 $\text{gcd}(b’, a’) &#x3D; d$，并且有 $bx_1 + a’y_1 &#x3D; d$。</li>
+<li>由于 $a’ &#x3D; a - \lfloor \frac{a}{b} \rfloor b$，我们可以将 $a’$ 和 $b’$ 的表达式代入到上述等式中，得到：<br>$ b(x_1 - \lfloor \frac{a}{b} \rfloor y_1) + a(-y_1) &#x3D; d $</li>
+<li>这样，我们得到了一个新的等式：$ax + by &#x3D; \text{gcd}(a, b)$，其中 $x &#x3D; x_1 - \lfloor \frac{a}{b} \rfloor y_1, y &#x3D; -y_1$。</li>
+</ul>
+</li>
+<li><p><strong>最终结果</strong>：</p>
+<ul>
+<li>经过递归调用，最终会得到一个简单的等式 $a’x’ + b’y’ &#x3D; \text{gcd}(a, b)$，其中 $a’ &#x3D; b, b’ &#x3D; a \mod b$。</li>
+<li>通过不断调整 $x$ 和 $y$ 的值，可以逐步回溯到初始的 $a$ 和 $b$，得到满足条件的 $x$ 和 $y$。</li>
+</ul>
+</li>
+</ol>
+<p><strong>示例</strong></p>
+<p>以求解 $\text{gcd}(60, 48)$ 为例：</p>
+<ul>
+<li>第一步：$60 &#x3D; 1 \times 48 + 12$, 所以 $\text{gcd}(60, 48) &#x3D; \text{gcd}(48, 12)$</li>
+<li>第二步：$48 &#x3D; 4 \times 12 + 0$, 所以 $\text{gcd}(48, 12) &#x3D; 12$</li>
+</ul>
+<p>使用扩展欧几里得算法，我们得到：</p>
+<ul>
+<li>当 $a &#x3D; 60, b &#x3D; 48$ 时，$x &#x3D; 1, y &#x3D; -2$，满足 $60 \times 1 + 48 \times (-2) &#x3D; 12$。</li>
+<li>当 $a &#x3D; 48, b &#x3D; 12$ 时，$x &#x3D; 4, y &#x3D; -1$，满足 $48 \times 4 + 12 \times (-1) &#x3D; 12$。</li>
+</ul>
+<p>因此，对于任意两个整数 $a$ 和 $b$，可以通过扩展欧几里得算法找到满足 $ax + by &#x3D; \text{gcd}(a, b)$ 的整数 $x$ 和 $y$。</p>
+<details>
+<summary>$Program$</summary>
+
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">exgcd</span><span class="params">(<span class="type">int</span> a,<span class="type">int</span> b,<span class="type">int</span> &amp;x,<span class="type">int</span> &amp;y)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(b ==<span class="number">0</span>)&#123;</span><br><span class="line">        x=<span class="number">1</span>;</span><br><span class="line">        y=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">return</span> a;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="type">int</span> ret=<span class="built_in">exgcd</span>(b,a%b,x,y);</span><br><span class="line">    <span class="type">int</span> t=x;</span><br><span class="line">    x=y;</span><br><span class="line">    y=t-a/b*y;</span><br><span class="line">    <span class="keyword">return</span> ret;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</details>
+
+<h3 id="3-6-求裴蜀等式最小正解"><a href="#3-6-求裴蜀等式最小正解" class="headerlink" title="3.6 求裴蜀等式最小正解"></a>3.6 求裴蜀等式最小正解</h3><p>一般来说，我们求裴蜀等式都会解出一个解集组，这时候让我们对于其中一个解取一组特殊值. 因此我们需要根据一组求出来的一般解解出特殊解. 通常情况下我们采用如下等式.</p>
+<p>$No.361$ $ax+by&#x3D;a\ (x-bk)+b\ (y+ak)$</p>
+<p>下面我们来讨论解出最小正解的方式.</p>
+<p>注意到我们只需要求出最大的 $k$ 值即可，令 $x-bk&gt;0$，有 $bk&lt;x$，得出 $k_{max}&#x3D;floor(\frac{x}{b})$，那么 $x_{ans}&#x3D;x-bk$ 即可.</p>
+<p>事实上，该式也可写作 $x_{ans}&#x3D;(x\ mod\ p+p)\ mod\ p$.</p>
+<h3 id="3-7-扩展欧几里得算法解一般裴蜀等式"><a href="#3-7-扩展欧几里得算法解一般裴蜀等式" class="headerlink" title="3.7 扩展欧几里得算法解一般裴蜀等式"></a>3.7 扩展欧几里得算法解一般裴蜀等式</h3><p>一般裴蜀等式是指 $ax+by&#x3D;c\ (a,b,c,x,y\in Z)$ 这样的式子. 对于这样的式子，我们有:</p>
+<p>$No.371$ 满足 $ax+by&#x3D;c$ 有解的充要条件为 $(a,b)\mid c$.</p>
+<p>因此，对于 $ax+by&#x3D;c$，我们可以将其化为 $\frac{a\ (a,b)}{c}x+\frac{b\ (a,b)}{c}y&#x3D;(a,b)$，这样，我们可以用扩展欧几里得解出一组 $\frac{a\ (a,b)}{c}x$ 与 $\frac{b\ (a,b)}{c}y$.</p>
+<h2 id="4-素数"><a href="#4-素数" class="headerlink" title="4.素数"></a>4.素数</h2><h3 id="4-1-概述"><a href="#4-1-概述" class="headerlink" title="4.1 概述"></a>4.1 概述</h3><p>素数是除了 $1$ 与它本身外无其他正因子的整数. </p>
+<p>$(a,b)&#x3D;1$ 的两个整数称互素.</p>
+<p>$No.411$ 大于 $1$ 的整数必有素约数.</p>
+<p>$No.412$ 若 $p$ 是素数，则对于任意整数 $n$，要么 $p\mid n$，要么 $p,n$ 互素.</p>
+<h3 id="4-2-算术基本定理"><a href="#4-2-算术基本定理" class="headerlink" title="4.2 算术基本定理"></a>4.2 算术基本定理</h3><h3 id="4-3-质因数分解"><a href="#4-3-质因数分解" class="headerlink" title="4.3 质因数分解"></a>4.3 质因数分解</h3><p>$No.431$ 一个数 $n$ 的因数 $m$ 一定是由它的质因数组成的</p>
+<p>$$P.431$$</p>
+<p>假设该结论不成立，则说明存在 $p$，使得 $p\nmid n$ 且 $p\mid m$. 不妨设 $m&#x3D;kp\ (k\in Z)$，则有 $kp\nmid n$，即 $m\nmid n$，与假设矛盾，故结论成立</p>
+<p>$No.432 (from No.431)$ 给一个数 $n$ 乘一个它的因数，不会改变 $n$ 的质因数个数.</p>
+<h3 id="4-4-欧拉函数"><a href="#4-4-欧拉函数" class="headerlink" title="4.4 欧拉函数"></a>4.4 欧拉函数</h3><h4 id="4-4-1-概述"><a href="#4-4-1-概述" class="headerlink" title="4.4.1 概述"></a>4.4.1 概述</h4><p>欧拉函数用于计算小于等于 $n$ 的数中与 $n$ 互质的数的个数. 它的计算公式如下:</p>
+<p>$$\varphi(n)&#x3D;n\times \prod^{i}<em>{1\le i\le k}(1-\frac{1}{p</em>{i}})$$</p>
+<p>其中 $p_{i}$ 为 $n$ <strong>不重复的质因子</strong>.</p>
+<h4 id="4-4-2-欧拉函数的性质"><a href="#4-4-2-欧拉函数的性质" class="headerlink" title="4.4.2 欧拉函数的性质"></a>4.4.2 欧拉函数的性质</h4><p>$No.4421$ $\varphi(1)&#x3D;1$</p>
+<p>$No.4422$ 若 $p$ 为素数，则 $\varphi(p)&#x3D;p-1$.</p>
+<p>$No.4423$ 若 $p$ 为素数，则 $\varphi(p^{k})&#x3D;(p-1)\ p^{k-1}$.</p>
+<p>$$P.4423$$</p>
+<p>假设 $p \mid l$，不妨设 $l&#x3D;mp\ (m\in Z)$. 由欧拉定理中 $l\le n$，可知 $mp\le p^{k}$，即 $m\le p^{k-1}$，这些数都能被 $p$ 整除，因此不与 $p^{k}$ 互质. 由 $No.412$，与 $p^{k}$ 互质的数就有 $p^{k}-p^{k-1}&#x3D;(p-1)\ p^{k-1}$ 个.</p>
+<p>$No.4424$ $\varphi(x)$ 为积性函数.</p>
+<p>$No.4425$ 区间 $[1,n]$ 中全部与 $m$ 互质的数的个数为 $\frac{n}{m} \varphi(m)$.</p>
+<h4 id="4-4-3-关于欧拉函数的推论"><a href="#4-4-3-关于欧拉函数的推论" class="headerlink" title="4.4.3 关于欧拉函数的推论"></a>4.4.3 关于欧拉函数的推论</h4><p>$No.4431$ 若 $p\mid n$，则 $\varphi(n\times p)&#x3D;p\times \varphi(n)$.</p>
+<p>$$P.4431$$</p>
+<p>因为 $p \mid n$, 不妨设 $n&#x3D;kp\ (k\in Z)$，则 $n\times p&#x3D;kp^{2}$.</p>
+<p>根据欧拉函数的定义，有 $\varphi(kp)&#x3D;kp\times \prod^{i}<em>{1\le i\le l}(1-\frac{1}{p</em>{i}})$，且 $\varphi(kp^{2})&#x3D;kp^{2}\times \prod^{j}<em>{1\le j\le t}(1-\frac{1}{p</em>{j}})$.</p>
+<p>因为 $kp$ 已有质因数 $p$，根据 给一个数 $n$ 乘一个它的因数，不会改变 $n$ 的质因数值 ($No.432$). 可得 $\varphi(kp)$ 和 $\varphi(kp^{2})$ 的后项是相等的. 那么就有 $\varphi(n\times p)&#x3D;p\times \varphi(n)$.</p>
+<h4 id="4-4-4-欧拉筛"><a href="#4-4-4-欧拉筛" class="headerlink" title="4.4.4 欧拉筛"></a>4.4.4 欧拉筛</h4><p>关于单独计算单值的欧拉函数，我们可以直接根据定义得到. 从小到大判断原数能否被当前数整除，若可以则将原数中全部相同质因子都去掉.</p>
+<p>需要注意的是，与 $n$ 互质的数中，比 $\sqrt{n}$ 大的至多只有一个. 因此我们可以只分解出小于 $\sqrt{n}$ 的质因数，假如最后剩下的数字比一要大，那么剩下的数字即为那个互质的数.</p>
+<details>
+<summary>$Program$</summary>
+
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">phi</span><span class="params">(<span class="type">int</span> n)</span></span>&#123;</span><br><span class="line">  	<span class="type">int</span> ans=n;</span><br><span class="line">  	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">2</span>;i&lt;=<span class="built_in">sqrt</span>(n<span class="number">+0.5</span>);i++)&#123;</span><br><span class="line">	    <span class="keyword">if</span>(n%i==<span class="number">0</span>)&#123;</span><br><span class="line">		    ans=ans/i*(i<span class="number">-1</span>);</span><br><span class="line">		    <span class="keyword">while</span>(n%i==<span class="number">0</span>)&#123;</span><br><span class="line">			  	n/=i;</span><br><span class="line">			&#125;</span><br><span class="line">	    &#125;</span><br><span class="line">  	&#125;</span><br><span class="line">  	<span class="keyword">if</span>(n&gt;<span class="number">1</span>)&#123;</span><br><span class="line">	  	ans=ans/n*(n<span class="number">-1</span>);</span><br><span class="line">	&#125;</span><br><span class="line">  	<span class="keyword">return</span> ans;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</details>
+
+<p>欧拉筛可以帮我们提前计算出区间内的全部欧拉函数.</p>
+<p>我们使用线性筛做基础来进行.</p>
+<details>
+<summary>$Program$</summary>
+
+<p>代码中的解释:</p>
+<ol>
+<li>第二行根据 $No.4421$</li>
+<li>循环前四行为判断素数，$b$ 数组标记合数，$prime$ 数组按顺序记录全部的素数，$p$ 数组为欧拉函数.</li>
+<li>循环第三行利用 $No.4422$</li>
+<li>后面进行线性筛核心语句</li>
+<li>循环第七行: 若一个合数 $n$ 能被一个质数 $p$ 整除，那么 $n\times p$ 中一定包含了能与 $n$ 互质的全部整数.</li>
+<li>循环最后 : 利用 $No.4424$</li>
+</ol>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">euler</span><span class="params">(<span class="type">int</span> n)</span></span>&#123;</span><br><span class="line">	p[<span class="number">1</span>]=<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">2</span>;i&lt;=n;++i)&#123;</span><br><span class="line">    	<span class="keyword">if</span>(!b[i])&#123;</span><br><span class="line">        	prime[++num]=i;</span><br><span class="line">            p[i]=i<span class="number">-1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    	<span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">1</span>;j&lt;=num&amp;&amp;prime[j]*i&lt;=n;++j)&#123;</span><br><span class="line">    		b[i*prime[j]]=<span class="literal">true</span>;</span><br><span class="line">        	<span class="keyword">if</span>(i%prime[j]==<span class="number">0</span>)&#123;</span><br><span class="line">        		p[i*prime[j]]=p[i]*prime[j];</span><br><span class="line">           	 	<span class="keyword">break</span>;</span><br><span class="line">        	&#125;</span><br><span class="line">        	<span class="keyword">else</span>&#123;</span><br><span class="line">        		p[i*prime[j]]=p[i]*p[prime[j]];</span><br><span class="line">        	&#125;</span><br><span class="line">    	&#125; </span><br><span class="line">    &#125; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</details>
+
+<p>当然，除了线性筛，我们还有一种 $O(n\ logn)$ 的类埃氏筛做法.</p>
+<details>
+<summary>$Program$</summary>
+
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;++i)&#123;</span><br><span class="line">	p[i]=i;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">2</span>;i&lt;=n;++i)&#123;</span><br><span class="line">	<span class="keyword">if</span>(p[i]==i)&#123;</span><br><span class="line">		<span class="keyword">for</span>(<span class="type">int</span> j=i;j&lt;=n;j+=i)&#123;</span><br><span class="line">			p[j]=p[j]*(i<span class="number">-1</span>)/i;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</details>
+
+<h3 id="4-5-约数个数函数"><a href="#4-5-约数个数函数" class="headerlink" title="4.5 约数个数函数"></a>4.5 约数个数函数</h3><p>定义 $d(x)$ 表示 $x$ 的不同正因子个数，形式化地 ，$d(x)&#x3D;\sum\limits^{x}_{i}[i\mid x]$</p>
+<p>对于一个大于 $1$ 的正整数 $n$ 分解质因数，令 $n&#x3D;\prod^{k}<em>{i&#x3D;1}p</em>{i}^{a_{i}}$，则有：</p>
+<p>$$d(n)&#x3D;\prod^{k}<em>{i&#x3D;1}(a</em>{i}+1)$$</p>
+<p>$$P.4.5$$</p>
+<p>由约数的定义可知 $p_{i}^{a_{i}}$ 的约数有且仅有 $p_{i}^{a_{j}}$，其中 $j\in[0,i]$，即一共有 $(a_{i}+1)$ 个.</p>
+<p>由乘法原理得证.</p>
+<h2 id="5-同余"><a href="#5-同余" class="headerlink" title="5.同余"></a>5.同余</h2><h3 id="5-1-概述"><a href="#5-1-概述" class="headerlink" title="5.1 概述"></a>5.1 概述</h3><p>若正整数 $n,a,b$ 满足 $n\mid (a+b)$，则称 $a\equiv b \pmod c$. 否则称 $a\not \equiv b \pmod c$.</p>
+<p>$No.511$ $a\equiv b \pmod c$ 的充要条件为 $a\ mod\ c&#x3D;b\ mod\ c$.</p>
+<p>$No.512$ $a\equiv a \pmod n$.</p>
+<p>$No.513$ 若 $a\equiv b \pmod n,b\equiv c \pmod n$，则 $a\equiv c \pmod n$.</p>
+<p>$No.514$ 若 $a\equiv b \pmod n,c\equiv d \pmod n$，则 $(a\pm c)\equiv (b\pm d) \pmod n$.</p>
+<p>$No.515$ 若 $a\equiv b \pmod n,c\equiv d \pmod n$，则 $(ac)\equiv (bd) \pmod n$.</p>
+<p>对于单纯的取模操作，我们也有:</p>
+<p>$No.516$ $c\ (a+b)\ mod\ p&#x3D;c\ (a\ mod\ p+b\ mod\ p)\ mod\ p$.</p>
+<h3 id="5-2-费马小定理"><a href="#5-2-费马小定理" class="headerlink" title="5.2 费马小定理"></a>5.2 费马小定理</h3><p>$No.521$ 若 $p$ 为素数，$a,p$ 互素. 则 $a^{p-1} \equiv 1\pmod p$.</p>
+<p>$No.522(fromNo.521)$ 若 $p$ 为素数，$a,p$ 互素. 则 $a^{p} \equiv a\pmod p$.</p>
+<h3 id="5-3-线性同余方程"><a href="#5-3-线性同余方程" class="headerlink" title="5.3 线性同余方程"></a>5.3 线性同余方程</h3><p>线性同余方程是形为 $ax\equiv b \pmod n$ 这样的一元一次方程，为了解出这样的方程，需要掌握如下技巧.</p>
+<h4 id="5-3-1-乘法逆元"><a href="#5-3-1-乘法逆元" class="headerlink" title="5.3.1 乘法逆元"></a>5.3.1 乘法逆元</h4><p>若 $ax\equiv 1 \pmod b$，则称 $x$ 为 $a$ 在模 $b$ 意义下的乘法逆元，记作 $a^{-1}$.</p>
+<p>因为除法取模不满足类分配律，因此出现了乘法逆元来进行 $\frac{a}{b}\ mod\ p$ 的快速计算.</p>
+<p><strong>乘法逆元的定义推导</strong></p>
+<p>设 $\frac{a}{b}\ mod\ p&#x3D;m$，给等式两边同乘 $b$，有 $a\ mod\ p&#x3D;mb\ mod\ p$ . 若存在 $ax\ mod\ p&#x3D;m$.</p>
+<p>不妨设 $a,b &lt; p$，则有 $a&#x3D;mb\ mod\ p$. 等式两边同乘 $x$，有 $ax\ mod\ p&#x3D;m\ mod\ p&#x3D;xmb\ mod\ p$.</p>
+<p>联立上述式子，那么 $m&#x3D;xmb\ mod\ p$，解得 $bx\ mod\ p&#x3D;1$.</p>
+<p>一个逆元方程并不一定有解，$a,b$ 存在倍数关系时无逆元，反之，$a,b$ 互质时存在逆元.</p>
+<p>下面我们介绍求逆元的方法，因此以下默认 $a,b$ 不存在倍数关系.</p>
+<p>费马小定理可以求出当模数 $b$ 为素数时的逆元.</p>
+<p><strong>正确性证明</strong></p>
+<p>根据费马小定理，有 $a^{p-1}\ mod\ p&#x3D;a\times a^{p-2}\ mod\ p&#x3D;1$，为逆元方程. 因此 $a$ 在模 $p$ 意义下的逆元为 $a^{p-2}\ mod\ p$.</p>
+<details>
+<summary>$Program$</summary>
+
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">quickpow</span><span class="params">(<span class="type">int</span> a,<span class="type">int</span> n,<span class="type">int</span> p)</span></span>&#123;</span><br><span class="line">    <span class="type">int</span> ans=<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">while</span>(n)&#123;</span><br><span class="line">        <span class="keyword">if</span>(n&amp;<span class="number">1</span>) ans=ans*a%p;</span><br><span class="line">        a=a*a%p;</span><br><span class="line">        n&gt;&gt;=<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> ans;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">bace</span><span class="params">(<span class="type">int</span> a,<span class="type">int</span> p)</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">quickpow</span>(a,p<span class="number">-2</span>,p);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</details>
+
+<p>扩展欧几里得算法可以求逆元.</p>
+<p><strong>正确性证明</strong></p>
+<p>若要 $ax\equiv 1 \pmod b$，则有 $ax&#x3D;by+1$，即 $ax-by&#x3D;1$. 这里 $y$ 为中间参数，取相反数不影响结果. 有 $ax+by&#x3D;1$，所以可以使用扩展欧几里得算法求逆元. 只需要满足 $a,b$ 互质.</p>
+<details>
+<summary>$Program$</summary>
+
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">exgcd</span><span class="params">(<span class="type">int</span> a,<span class="type">int</span> b,<span class="type">int</span> &amp;x,<span class="type">int</span> &amp;y)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (b==<span class="number">0</span>) &#123;</span><br><span class="line">        x=<span class="number">1</span>;</span><br><span class="line">        y=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">return</span> a;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 注意传参顺序</span></span><br><span class="line">    <span class="type">int</span> ret=<span class="built_in">exgcd</span>(b, a%b, y, x);</span><br><span class="line">    y-=a/b*x;</span><br><span class="line">    <span class="keyword">return</span> ret;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</details>
+
+<p>还有一种线性求逆元的方法，适合多次大量预处理时使用，利用的原理为</p>
+<p>$No.5311$ $i^{i}\equiv -\lfloor {\frac{p}{i}} \rfloor \times (p\ mod\ i)^{-1}\pmod {p}$</p>
+<details>
+<summary>$Program1$</summary>
+
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ny[<span class="number">1</span>] = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">2</span>; i &lt; p; ++i) &#123;</span><br><span class="line">    ny[i] = (<span class="type">long</span> <span class="type">long</span>)-(p / i) * ny[p % i] % p; <span class="comment">// 注意最后的模 p 不要忘记</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</details>
+
+<details>
+<summary>$Program2$</summary>
+
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 因为 1&lt;i&lt;p，所以 p/i 一定小于 p</span></span><br><span class="line">ny[<span class="number">1</span>] = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">2</span>; i &lt; p; ++i) &#123;</span><br><span class="line">    ny[i] = (<span class="type">long</span> <span class="type">long</span>)(p - p / i) * ny[p % i] % p; <span class="comment">// 注意最后的模 p 不要忘记</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</details>
+
+<h4 id="5-3-2-线性同余方程"><a href="#5-3-2-线性同余方程" class="headerlink" title="5.3.2 线性同余方程"></a>5.3.2 线性同余方程</h4><p>$No.5321$ 线性同余方程 $ax\equiv b \pmod m$ 有解的充要条件为 $(a,m)\mid b$.</p>
+<p>我们注意到 $ax\equiv b \pmod m$ 实际上等价于 $ax-b&#x3D;ym\ (y\in Z)$. 移项可得 $ax-ym&#x3D;b$，不妨设 $y&#x3D;-y$，那么有 $ax+my&#x3D;b$. 因此我们可以利用扩展欧几里得解出一组通解 $x_{0},y_{0}$，那么方程的一个解就为 $x_{1}&#x3D;\frac{bx_{0}}{(a,m)}$，通解 $x$ 满足 $x\equiv x_{1} \pmod {\frac{m}{(a,m)}}$.</p>
+<h3 id="5-4-中国剩余定理"><a href="#5-4-中国剩余定理" class="headerlink" title="5.4 中国剩余定理"></a>5.4 中国剩余定理</h3><p>中国剩余定理算法可以用于求解一个<strong>线性同余方程组 $\sum_{i} x \equiv a_{i} \pmod n_{i}$ (其中模数必须两两互质)</strong>.</p>
+<p>中国剩余定理的主要内容体现流程如下:</p>
+<ol>
+<li><p>计算 $n&#x3D;\prod_{i} n_{i}$</p>
+</li>
+<li><p>计算 $\sum_{i} m_{i}&#x3D;\frac{n}{n_{i}}$</p>
+</li>
+<li><p>计算 $\sum_{i} c_{i}&#x3D;m_{i}\times m_{i}^{-1}\pmod {m_{i}}$</p>
+</li>
+<li><p>$x&#x3D;\sum_{i} a_{i}\times c_{i}\ mod\ n$.</p>
+</li>
+</ol>
+<p><strong>正确性证明</strong></p>
+<p>引用我们在步骤中使用到的变量.</p>
+<p>因为全部的 $n_{i}$ 两两互质，因此将全部两两互质的数乘起来，可知 $n$ 其中的质因子 $n_{i}$ 必然只有一个. 那么 $ m_{i}&#x3D;\frac{n}{n_{i}}$ 中必然没有质因子 $n_{i}$，也就是说 $m_{i},n_{i}$ 互质.</p>
+<p>因为互质，所以由乘法逆元的定义，我们可以推出</p>
+<p>$$m_{i}\times m_{i}^{-1}\equiv 1 \pmod {n_{i}}$$</p>
+<p>由 $No.515$，可得</p>
+<p>$$m_{i}\times m_{i}^{-1}\times a_{i}\equiv a_{i} \pmod {n_{i}}$$</p>
+<p>并且根据上述两两互质，又因为 $m_{i}&#x3D;\frac{n}{n_{i}}$，因此 $m_{i}\ mod\ n_{j}&#x3D;0$，我们还可以得出</p>
+<p>$$m_{i}\times m_{i}^{-1}\times a_{i}\equiv 0 \pmod {n_{j}}\ (i\neq j)$$</p>
+<p>根据构造，可得</p>
+<p>$$x\equiv \sum_{i} (a_{i}\times m_{i}\times m_{i}^{-1})\pmod n$$</p>
+<p>符合原方程组的形式，即存在 $x$ 为原方程的解.</p>
+<h2 id="6-排列与组合"><a href="#6-排列与组合" class="headerlink" title="6.排列与组合"></a>6.排列与组合</h2><h3 id="6-1-概述"><a href="#6-1-概述" class="headerlink" title="6.1 概述"></a>6.1 概述</h3><p>排列是指若干元素排成一列的不同情况 (考虑顺序). 从 $n$ 个元素中选出 $m$ 个数的排列的个数称为 $n$ 选 $m$ 的排列数，记作 $A^{m}_{n}$.</p>
+<p>排列数的计算公式为</p>
+<p>$$A^{m}_{n}&#x3D;n\ (n-1)\ (n-2)…(n-m+1)$$</p>
+<p>也即 </p>
+<p>$$A^{m}_{n}&#x3D;\frac{n!}{(n-m)!}$$</p>
+<p>组合是将若干元素选入集合内的不同情况 (不考虑顺序). 从 $n$ 个元素中选出 $m$ 个数的组合的个数称为 $n$ 选 $m$ 的组合数，记作 $C^{m}_{n}$.</p>
+<p>组合数的计算公式为 </p>
+<p>$$C^{m}_{n}&#x3D;\frac{n\ (n-1)\ (n-2)…(n-m+1)}{m\ (m-1)\ (m-2)…1}$$</p>
+<p>也即</p>
+<p>$$C^{m}<em>{n} &#x3D; \frac {A^{m}</em>{n}} {A^{m}_{m} } &#x3D; \frac{n!}{m!\ (n-m)!}$$</p>
+<p>一般来说，我们有</p>
+<p>$A^{n}<em>{n}&#x3D;A^{n-1}</em>{n}$.</p>
+<p>$A^{1}<em>{n}&#x3D;n$，$C^{1}</em>{n}&#x3D;n$.</p>
+<p>$A^{n}<em>{n}&#x3D;n!$，$C^{n}</em>{n}&#x3D;1$.</p>
+<p>$C^{n-1}_{n}&#x3D;n$.</p>
+<p>$C^{m}<em>{n}&#x3D;C^{n-m}</em>{n}$.</p>
+<p>$C^{m}<em>{n}&#x3D;C^{m-1}</em>{n-1}+C^{m}_{n-1}$.</p>
+<h4 id="6-1-1-二项式定理"><a href="#6-1-1-二项式定理" class="headerlink" title="6.1.1 二项式定理"></a>6.1.1 二项式定理</h4><p>二项式定理用于对 $(x+y)^{k}$ 进行展开</p>
+<p>$No.6111$ $(x+y)^{n}&#x3D;\sum_{i &#x3D; 0}^n C_{n}^i x^{n - i} y^{i}$</p>
+<h3 id="6-2-快速组合数求法"><a href="#6-2-快速组合数求法" class="headerlink" title="6.2 快速组合数求法"></a>6.2 快速组合数求法</h3><h4 id="6-2-1-Lucas-定理"><a href="#6-2-1-Lucas-定理" class="headerlink" title="6.2.1 Lucas 定理"></a>6.2.1 Lucas 定理</h4><p><strong>Lucas 定理的适用条件: 组合数很大，模数较小 (一般 $\le 10^{5}$) ，且为素数</strong>.</p>
+<p>$No.6211$ $C^{m}<em>{n}&#x3D;C^{\lfloor {\frac{m}{p}} \rfloor}</em>{\lfloor {\frac{n}{p}} \rfloor}\times C^{m\ mod\ p}_{n\ mod\ p}\ mod\ p$.</p>
+<p>$$P.6211$$</p>
+<p>不妨设 $p$ 为质数. 那么对于 $j\in [1,p)$，有:</p>
+<p>$$C^{j}_{p}&#x3D;\frac{p!}{j!\ (p-j)!}&#x3D;\frac{(p-1)!}{(j-1)!\ (p-j)!}\times \frac{p}{j}$$</p>
+<p>可以发现提出了一个因子 $p$. 也就是说 $C^{j}_{p}\mod p&#x3D;0$.</p>
+<p>那么根据二项式定理,</p>
+<p>$$(1+j)^{p}&#x3D;1+\sum^{p-1}<em>{i} [C^{i}</em>{p}\times j^{i}] +j^{p}$$</p>
+<p>因为已证得中间一项中一定有因子 $p$，故</p>
+<p>$$\sum^{p-1}<em>{i} [C^{i}</em>{p}\times j^{i}]\ mod\ p&#x3D;0$$</p>
+<p>也即</p>
+<p>$$(1+j)^{p} \equiv 1+j^{p} \pmod p$$</p>
+<p>在这里我们进行构造，设 $n&#x3D;sp+q,m&#x3D;lp+r\ (p,r\in [1,p)$. 也就是都表示成带余除法式. 那么</p>
+<p>$$(1+x)^{sp+q}&#x3D;(1+x)^{sp}\ (1+x)^{q}$$</p>
+<p>根据上面的结论，有</p>
+<p>$$(1+x)^{sp}\ (1+x)^{q} \equiv (1+x^{p})^{s}\ (1+x)^{q}\pmod p$$</p>
+<p>再根据二项式定理展开，那么</p>
+<p>$$(1+x)^{sp+q} \equiv [\sum_{i}\ (C^{i}<em>{s}\times x^{pi})]\times [\sum</em>{i}\ (C^{i}_{q}\times x^{j})]\pmod p$$</p>
+<p>假若我们只观察 $x^{lp+r}$ 项. 可以发现 $C^{lp+r}<em>{sp+q}\times x^{lp+r}\equiv C^{l}</em>{s}\times x^{lp}\times C^{r}_{q}\times x^{r} \pmod p$.</p>
+<p>根据我们的定义  $n&#x3D;sp+q,m&#x3D;lp+r$，将原式代换，可得</p>
+<p>$$C^{m}<em>{n}\times x^{m}\equiv C^{l}</em>{s}\times C^{r}_{q}\times x^{m} \pmod p$$</p>
+<p>两边同时除以 $x^{m}$</p>
+<p>$$C^{m}<em>{n}\equiv C^{l}</em>{s}\times C^{r}_{q}\pmod p$$</p>
+<p>那么根据定义，有</p>
+<p>$$C^{m}<em>{n}\equiv C^{\lfloor {\frac{m}{p}} \rfloor}</em>{\lfloor {\frac{n}{p}} \rfloor}\times C^{m\ mod\ p}_{n\ mod\ p}\pmod\ p$$</p>
+<details>
+<summary>$Program_{1}$</summary>
+
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">long</span> <span class="type">long</span> <span class="title">power</span><span class="params">(<span class="type">long</span> <span class="type">long</span> a,<span class="type">long</span> <span class="type">long</span> n)</span></span>&#123;</span><br><span class="line">	<span class="type">long</span> <span class="type">long</span> ans=<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">while</span>(n)&#123;</span><br><span class="line">        <span class="keyword">if</span>(n&amp;<span class="number">1</span>)ans=ans*a%p;</span><br><span class="line">        a=a*a%p;</span><br><span class="line">        n&gt;&gt;=<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> ans;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">long</span> <span class="type">long</span> <span class="title">C</span><span class="params">(<span class="type">long</span> <span class="type">long</span> n,<span class="type">long</span> <span class="type">long</span> m)</span></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(n&lt;m)&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span>(m&gt;n-m)&#123;</span><br><span class="line">		m=n-m; <span class="comment">//C&#123;n&#125;&#123;m&#125;=C&#123;n&#125;&#123;n-m&#125;;</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="type">long</span> <span class="type">long</span> a=<span class="number">1</span>,b=<span class="number">1</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;m;++i)&#123;</span><br><span class="line">		a=(a*(n-i))%p;</span><br><span class="line">		b=(b*(i<span class="number">+1</span>))%p;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> a*<span class="built_in">power</span>(b,p<span class="number">-2</span>)%p;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">long</span> <span class="type">long</span> <span class="title">lucas</span><span class="params">(<span class="type">long</span> <span class="type">long</span> n,<span class="type">long</span> <span class="type">long</span> m)</span></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(!m) <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">return</span> <span class="built_in">lucas</span>(n/p,m/p)*<span class="built_in">C</span>(n%p,m%p)%p;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</details>
+
+<details>
+<summary>$Program_{2}$</summary>
+
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">long</span> <span class="type">long</span> fact[<span class="number">1000001</span>];</span><br><span class="line"><span class="function"><span class="type">long</span> <span class="type">long</span> <span class="title">power</span><span class="params">(<span class="type">long</span> <span class="type">long</span> a,<span class="type">long</span> <span class="type">long</span> n)</span></span>&#123;</span><br><span class="line">	<span class="type">long</span> <span class="type">long</span> ans=<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">while</span>(n)&#123;</span><br><span class="line">        <span class="keyword">if</span>(n&amp;<span class="number">1</span>)ans=ans*a%p;</span><br><span class="line">        a=a*a%p;</span><br><span class="line">        n&gt;&gt;=<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> ans;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">dofact</span><span class="params">()</span></span>&#123;</span><br><span class="line">	fact[<span class="number">0</span>]=<span class="number">1</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=<span class="number">1000000</span>;++i)&#123;</span><br><span class="line">		fact[i]=fact[i<span class="number">-1</span>]*i%p;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">long</span> <span class="type">long</span> <span class="title">C</span><span class="params">(<span class="type">long</span> <span class="type">long</span> n,<span class="type">long</span> <span class="type">long</span> m)</span></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(!m)&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span>(n&lt;m)&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span>(m&gt;n-m)&#123;</span><br><span class="line">		m=n-m; <span class="comment">//C&#123;n&#125;&#123;m&#125;=C&#123;n&#125;&#123;n-m&#125;;</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="type">long</span> <span class="type">long</span> ans=fact[n]*<span class="built_in">power</span>(fact[m],p<span class="number">-2</span>)%p*<span class="built_in">power</span>(fact[n-m],p<span class="number">-2</span>)%p;</span><br><span class="line">	<span class="keyword">return</span> ans;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">long</span> <span class="type">long</span> <span class="title">lucas</span><span class="params">(<span class="type">long</span> <span class="type">long</span> n,<span class="type">long</span> <span class="type">long</span> m)</span></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(!m) <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">return</span> <span class="built_in">lucas</span>(n/p,m/p)*<span class="built_in">C</span>(n%p,m%p)%p;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</details>
+
+<h2 id="7-斐波那契数列"><a href="#7-斐波那契数列" class="headerlink" title="7.斐波那契数列"></a>7.斐波那契数列</h2><h3 id="7-1-整除推论"><a href="#7-1-整除推论" class="headerlink" title="7.1 整除推论"></a>7.1 整除推论</h3><p>设 $(i,j)&#x3D;gcd(i,j)$</p>
+<p>$$f_{i}&#x3D;f_{i-1}+f_{i-2}$$</p>
+<p>$$f_{i}&#x3D;f_{i-2}\times f_{1}+f_{i-1}\times f_{2}$$</p>
+<p>$$f_{i}&#x3D;f_{i-1}\times f_{2}+f_{i-2}\times f_{1}$$</p>
+<p>$$f_{i}&#x3D;(f_{i-3}+f_{i-2})\times f_{2}+f_{i-2}\times f_{1}$$</p>
+<p>$$f_{i}&#x3D;f_{i-3}\times f_{2}+f_{i-2}\times f_{3}$$</p>
+<p>$$f_{i}&#x3D;f_{i-k}\times f_{k-1}+F_{i-k+1}\times f_{k}$$</p>
+<p>$$f_{n+m}&#x3D;f_{n-1}\times f_{m}+f_{n}\times f_{m+1}$$</p>
+<p>$$(f_{1},f_{2})&#x3D;(f_{2},f_{3})&#x3D;(f_{i},f_{i-1})&#x3D;(f_{i}-f_{i-1},f_{i-1})&#x3D;(f_{i-2},f_{i-1})&#x3D;1$$</p>
+<p>$$f_{(i,j)}&#x3D;(f_{i},f_{j})\rightarrow f_{j}\mid f_{i}&#x3D;j\mid i$$</p>
+<p>因为 $f_{2}&#x3D;1$，则 $f_{2}\mid 2x+1(x\in Z)$，但 $2\nmid 2x+1 (x\in Z)$，故上述式子存在特例，且该特例唯一.</p>
+<h3 id="7-2-约数推论"><a href="#7-2-约数推论" class="headerlink" title="7.2 约数推论"></a>7.2 约数推论</h3><p>设 $tot(i)$ 是 $i$ 的约数的个数，将 $i$ 用唯一分解定理分解为</p>
+<p>$$i&#x3D;\prod\limits_{i}p_{i}^{c_{i}}$$</p>
+<p>则有 </p>
+<p>$$tot(i)&#x3D;\prod(c_{i}+1)$$</p>
+<p>那么 </p>
+<p>$$tot(i\times j)&#x3D;\prod\limits_{i}p_{i}^{c_{i}}\times \prod\limits_{j}p_{j}^{c_{j}}&#x3D;tot(i)\times tot(j)$$</p>
+<p>即 $tot(x)$ 为 <a target="_blank" rel="noopener" href="https://www.cnblogs.com/HaneDaCafe/articles/18089562">积性函数</a>.</p>
+<p>若质数 $p\mid i$，则 $min_{j}[j\mid (i\times p)]&#x3D;p$，且 $c_{p_{i}}&#x3D;2$</p>
+<p>若质数 $p$ 是 $i\times p$ 的最小因子，不妨设</p>
+<p>$$i&#x3D;p^{c_{p}}\times\prod\limits_{i}p_{i}^{c_{p_{i}}}$$</p>
+<p>$$tot(i)&#x3D;c_{p}\times \prod\limits_{i}c_{p_{i}}$$</p>
+<p>则</p>
+<p>$$i\times p&#x3D;p^{c_{p}+1}\times\prod\limits_{i}p_{i}^{c_{p_{i}}}$$</p>
+<p>$$tot(i\times p)&#x3D;(c_{p}+1)\times \prod\limits_{i}c_{p_{i}}$$</p>
+<p>则</p>
+<p>$$tot(i\times p)&#x3D;\frac{tot(i)}{c_{p}}\times (c_{p}+1)$$</p>
+<p>所以我们引入 $mintimes(i)$ 表示 $i$ 的最小约数的 $c_{i}$.</p>
+<p>上述式子可以表示成</p>
+<p>$$tot(i\times p)&#x3D;\frac{tot(i)}{mintimes(i)}\times (mintimes(i)+1)$$</p>
+<p><em>上述推论对全部 $p\in p</em>{i}$ 均成立_</p>
+<h3 id="7-3-平方和推论"><a href="#7-3-平方和推论" class="headerlink" title="7.3 平方和推论"></a>7.3 平方和推论</h3><p>设 $sqrtot(i)$ 为 $i$ 的约数的平方和，与 $tot(i)$ 类似，可得</p>
+<p>$$sqrtot(x)&#x3D;\prod_{i}\ \sum_{j&#x3D;0}^{c_{i}}(p_{i}^{j})^{2}$$</p>
+<p>$$sqrtot(i\times j)&#x3D;\prod_{i}\ \sum_{j&#x3D;0}^{c_{i}}(p_{i}^{j})^{2}\times \prod_{i’}\ \sum_{j’&#x3D;0}^{c_{i’}}(p_{i’}^{j’})^{2}&#x3D;sqrtot(i)\times sqrtot(j)$$</p>
+<p>所以 $sqrtot(x)$ 也为积性函数</p>
+<p>同理，不妨设</p>
+<p>$$p_{sum}&#x3D;\sum_{j&#x3D;0}^{c_{p_{i}}}(p^{j})^{2}$$</p>
+<p>$$sqrtot(i)&#x3D;p_{sum}\times \prod_{i}\ \sum_{j&#x3D;0}^{c_{i}}(p_{i}^{j})^{2}$$</p>
+<p>则</p>
+<p>$$sqrtot(i\times p)&#x3D;(p^{2}\times p_{sum}+1)\times \prod_{i}\ \sum_{j&#x3D;0}^{c_{i}}(p_{i}^{j})^{2}$$</p>
+<h3 id="7-4-通项公式"><a href="#7-4-通项公式" class="headerlink" title="7.4 通项公式"></a>7.4 通项公式</h3><p>斐波那契的递推定义式为 $f_{n}&#x3D;f_{n-1}+f_{n-2}$</p>
+<p>考虑将递推式构造成等比数列形式，即 $g_{n}&#x3D;kg_{n-1}$ 的形式，再考虑到斐波那契的递推式由两个元素决定，故表示如下：</p>
+<p>$$f_{n}-\lambda f_{n-1}&#x3D;\mu (f_{n-1}-\lambda f_{n-2})$$</p>
+<p>将 $f_{n}&#x3D;f_{n-1}+f_{n-2}$ 代入，得</p>
+<p>$$f_{n-1}+f_{n-2}-\lambda f_{n-1}&#x3D;\mu f_{n-1}-\mu\lambda f_{n-2}$$</p>
+<p>$$(\mu +\lambda -1)f_{n-1}&#x3D;(1+\mu\lambda)f_{n-2}$$</p>
+<p>因为 $f_{n-1}\neq f_{n-2}$，故有：</p>
+<p>$$\begin{cases}\mu +\lambda -1&#x3D;0\1+\mu\lambda&#x3D;0\end{cases}$$</p>
+<p>解得</p>
+<p>$$\begin{cases}<br>\lambda &#x3D; \frac{1+\sqrt{5}}{2}\<br>\mu &#x3D; \frac{1-\sqrt{5}}{2}<br>\end{cases}$$</p>
+<p>或</p>
+<p>$$\begin{cases}<br>\lambda &#x3D; \frac{1-\sqrt{5}}{2}\<br>\mu &#x3D; \frac{1+\sqrt{5}}{2}<br>\end{cases}$$</p>
+<p>带回等比数列，归纳出通项公式：</p>
+<p>$$f_n-\frac{1+\sqrt{5}}{2}f_{n-1}&#x3D;(\frac{1-\sqrt{5}}{2})^{n-2}(f_2-\frac{1+\sqrt{5}}{2}f_1)\tag{1}$$</p>
+<p>或</p>
+<p>$$f_n-\frac{1-\sqrt{5}}{2}f_{n-1}&#x3D;(\frac{1+\sqrt{5}}{2})^{n-2}(f_2-\frac{1-\sqrt{5}}{2}f_1)\tag{2}$$</p>
+<p>因为这两个式子相对于原式均成立，因此我们尝试从两个式子中消掉 $f_{n-1}$ 项，可知 $(2)\times \frac{1-\sqrt{5}}{2}-(1)\times \frac{1+\sqrt{5}}{2}$ 即可得到通项公式</p>
+<p>整理得</p>
+<p>$$f_{n}&#x3D;\frac{1}{\sqrt{5}}[(\frac{\sqrt{5}+1}{2})^{n}-(\frac{1-\sqrt{5}}{2})^{n}]$$</p>
+<h3 id="7-5-斐波那契间项积与中项平方的关系"><a href="#7-5-斐波那契间项积与中项平方的关系" class="headerlink" title="7.5 斐波那契间项积与中项平方的关系"></a>7.5 斐波那契间项积与中项平方的关系</h3><p>$$f_{n}f_{n-2}-f_{n-1}^{2}&#x3D;(-1)^{n-1}$$</p>
+<p><strong>正确性证明</strong></p>
+<p>为了简化我们的证明，以下令 $P&#x3D;\frac{\sqrt{5}+1}{2},Q&#x3D;\frac{1-\sqrt{5}}{2}$，则通项公式可表述为 $\frac{1}{\sqrt{5}}(P^{n}-Q^{n})$</p>
+<p>将原式全部用通项公式代换，得</p>
+<p>$$\frac{1}{\sqrt{5}\times\sqrt{5}}(P^{n}-Q^{n})(P^{n-2}-Q^{n-2})-\frac{1}{(\sqrt{5})^{2}}(P^{n-1}-Q^{n-1})^{2}$$</p>
+<p>全部拆开</p>
+<p>$$\frac{1}{5}[P^{2n-2}+Q^{2n-2}-P^{n}Q^{n-2}-P^{n-2}Q^{n}-(P^{2n-2}+Q^{2n-2}-2P^{n-1}Q^{n-1})]$$</p>
+<p>消项</p>
+<p>$$\frac{1}{5}[-P^{n}Q^{n-2}-P^{n-2}Q^{n}+2P^{n-1}Q^{n-1}]$$</p>
+<p>变形</p>
+<p>$$-\frac{1}{5}[P^{n-1}Q^{n-1}(\frac{P}{Q}+\frac{Q}{P}-2)]$$</p>
+<p>$$-\frac{1}{5}[(PQ)^{n-1}(\frac{P}{Q}+\frac{Q}{P}-2)]$$</p>
+<p>因为上文中设 $P&#x3D;\frac{\sqrt{5}+1}{2},Q&#x3D;\frac{1-\sqrt{5}}{2}$，故 $PQ&#x3D;-1,\frac{P}{Q}&#x3D;-\frac{3+\sqrt{5}}{2},\frac{Q}{P}&#x3D;-\frac{3-sqrt{5}}{2},\frac{P}{Q}+\frac{Q}{P}-2&#x3D;-5$，消去 $-\frac{1}{5}$，得</p>
+<p>$$f_{n}f_{n-2}-f_{n-1}^{2}&#x3D;(-1)^{n-1}$$</p>
+<h3 id="7-6-斐波那契同比"><a href="#7-6-斐波那契同比" class="headerlink" title="7.6 斐波那契同比"></a>7.6 斐波那契同比</h3><p>当 $n\rightarrow +\infty$ 时，$\frac{f_{n}}{f_{n-1}}&#x3D;\frac{f_{n-1}}{f_{n-2}}$</p>
+<p><strong>正确性证明</strong></p>
+<p>由 7.5 可知，$f_{n}f_{n-2}-f_{n-1}^{2}&#x3D;(-1)^{n-1}$，对其移项</p>
+<p>$$f_{n}f_{n-2}&#x3D;(-1)^{n-1}+f_{n-1}^{2}$$</p>
+<p>同除 $f_{n-1}f_{n-2}$</p>
+<p>$$\frac{f_{n}}{f_{n-1}}&#x3D;\frac{(-1)^{n-1}}{f_{n-1}f_{n-2}}+\frac{f_{n-1}}{f_{n-2}}$$</p>
+<p>当 $n\rightarrow +\infty$ 时，$\frac{(-1)^{n-1}}{f_{n-1}f_{n-2}}\rightarrow 0$，故有</p>
+<p>$$\frac{f_{n}}{f_{n-1}}&#x3D;\frac{f_{n-1}}{f_{n-2}}$$</p>
+<h3 id="7-7-斐波那契黄金公比"><a href="#7-7-斐波那契黄金公比" class="headerlink" title="7.7 斐波那契黄金公比"></a>7.7 斐波那契黄金公比</h3><p>由 7.6，设 $\frac{f_{n}}{f_{n-1}}&#x3D;\frac{f_{n-1}}{f_{n-2}}&#x3D;k$，有</p>
+<p>$$\frac{f_{n-1}+f_{n-2}}{f_{n-1}}&#x3D;\frac{f_{n-1}}{f_{n-2}}&#x3D;k$$</p>
+<p>$$1+\frac{f_{n-2}}{f_{n-1}}&#x3D;\frac{f_{n-1}}{f_{n-2}}&#x3D;k$$</p>
+<p>$$f_{n-1}f_{n-2}+f_{n-2}^{2}&#x3D;f_{n-1}^{2}$$</p>
+<p>此时将 $f_{n-1}&#x3D;kf_{n-2}$ 代入</p>
+<p>$$kf_{n-2}^{2}+f_{n-2}^{2}&#x3D;k^{2}f_{n-2}^{2}$$</p>
+<p>消去 $f_{n-2}^{2}$</p>
+<p>$$k+1&#x3D;k^{2}$$</p>
+<p>解得 $k&#x3D;\frac{1+\sqrt{5}}{2}$，即黄金分割比</p>
+<h2 id="8-导数与积分"><a href="#8-导数与积分" class="headerlink" title="8.导数与积分"></a>8.导数与积分</h2><h3 id="8-1-导数"><a href="#8-1-导数" class="headerlink" title="8.1 导数"></a>8.1 导数</h3><h4 id="8-1-1-导数的意义"><a href="#8-1-1-导数的意义" class="headerlink" title="8.1.1 导数的意义"></a>8.1.1 导数的意义</h4><p>$f(x)$ 在 $x$ 处的导数 $f’(x)$ 的含义为：$f(x)$ 在 x 处的切线斜率 $k$. 如 $f(x_{0}):kx+b&#x3D;k$.</p>
+<h4 id="8-1-2-基本导数公式"><a href="#8-1-2-基本导数公式" class="headerlink" title="8.1.2 基本导数公式"></a>8.1.2 基本导数公式</h4><p>1. </p>
+<p>$$[f(x)+g(x)]’&#x3D;f’(x)+g’(x)$$</p>
+<ol start="2">
+<li></li>
+</ol>
+<p>$$[f(x)\times g(x)]’&#x3D;f(x)g’(x)+f’(x)g(x)$$</p>
+<p>推论 </p>
+<p>$$[kf(x)]’&#x3D;kf’(x)$$</p>
+<p>3. </p>
+<p>$$[\frac{f(x)}{g(x)}]’&#x3D;\frac{f’(x)g&#x3D;(x)-f(x)g’(x)}{g^{2}(x)}$$</p>
+<h4 id="8-1-3-初等函数导数公式"><a href="#8-1-3-初等函数导数公式" class="headerlink" title="8.1.3 初等函数导数公式"></a>8.1.3 初等函数导数公式</h4><ol>
+<li><p>$(k)’&#x3D;0$</p>
+</li>
+<li><p>$(x^{k})’&#x3D;kx^{k-1}$</p>
+</li>
+<li><p>$(a^{x})’&#x3D;a^{x}ln\ a$</p>
+</li>
+<li><p>$(log_{a}x)’&#x3D;\frac{1}{xln\ a}$</p>
+</li>
+<li><p>$(sin\ x)’&#x3D;cos\ x$</p>
+</li>
+<li><p>$(cos\ x)’&#x3D;-sin\ x$</p>
+</li>
+<li><p>$(tan\ x)’&#x3D;sec^{2}\ x$</p>
+</li>
+<li><p>$(sinh\ x)’&#x3D;cosh\ x$</p>
+</li>
+</ol>
+<h4 id="8-1-4-反函数公式"><a href="#8-1-4-反函数公式" class="headerlink" title="8.1.4 反函数公式"></a>8.1.4 反函数公式</h4><p>$$[f^{-1}(x)]’&#x3D;-f’(x)\times f^{-2}(x)$$</p>
+<h4 id="8-1-5-复合函数导数公式"><a href="#8-1-5-复合函数导数公式" class="headerlink" title="8.1.5 复合函数导数公式"></a>8.1.5 复合函数导数公式</h4><p>$$\frac{d}{dx}f[g(x)]&#x3D;\frac{d}{dx}g(x)\times \frac{d}{d\ g(x)}f[g(x)]$$</p>
+<h4 id="8-1-6-牛顿莱布尼茨公式"><a href="#8-1-6-牛顿莱布尼茨公式" class="headerlink" title="8.1.6 牛顿莱布尼茨公式"></a>8.1.6 牛顿莱布尼茨公式</h4><p>$$(f(x)g(x))^{n}&#x3D;\sum\limits_{k&#x3D;0}^{n}C^{k}_{n}f^{k}(x)g^{n-k}(x)$$</p>
+<p><strong>举点例子</strong></p>
+<p>对 $2x^{3}+3^{x}$ 求导</p>
+<p>套式子，$f’(x)&#x3D;2(x^{3})’+(3^{x})’&#x3D;6x^{2}+3^{x}ln\ 3$</p>
+<p>或者使用公式 $f’(x)&#x3D;\frac{f(x+dx)-f(x)}{dx}$ 直接计算，其中 $dx$ 是一个引入的无穷小的变量，先约，然后按 $kdx&#x3D;0$ 进行消项.</p>
+<p>对 $x^{3}$ 求导</p>
+<p>$\frac{df(x)}{dx}&#x3D;\frac{(x+dx)^{3}-x^{3}}{dx}&#x3D;\frac{x^{3}+3x^{2}dx+3xdx^{2}+dx^{3}-x^{3}}{dx}&#x3D;3x^{2}+3xdx-dx^{2}$，当 $dx\rightarrow 0$ 时，$\frac{df(x)}{dx}&#x3D;3x^{2}$</p>
+<h3 id="8-2-积分"><a href="#8-2-积分" class="headerlink" title="8.2 积分"></a>8.2 积分</h3><h4 id="8-2-1-定义"><a href="#8-2-1-定义" class="headerlink" title="8.2.1 定义"></a>8.2.1 定义</h4><p>$$\int_{a}^{b}f(x)dx$$</p>
+<p>表示 $f(x)$ 在区间 $[a,b]$ 内的图像与 $x$ 轴围成封闭图形的面积（这样说是不严谨的，实际上还要包括 $y&#x3D;a,y&#x3D;b$ ）.</p>
+<p>如</p>
+<p>$$\int_{0}^{3}2dx&#x3D;2\times (3-0)&#x3D;6$$</p>
+<p>表示函数 $f(x)&#x3D;2$ 与 $y&#x3D;0,y&#x3D;3,x$ 轴围成的图形面积为 $6$.</p>
+<p>积分符号用来表示 “某段区间内连续不断的加和” 这样的概念，不一定非得是面积. 只不过面积是长乘宽，当宽无穷小时（即 $dx$），对应的长即为 $f(x)$，面积为 $f(x)dx$.</p>
+<h4 id="8-2-2-基本定理"><a href="#8-2-2-基本定理" class="headerlink" title="8.2.2 基本定理"></a>8.2.2 基本定理</h4><p>令 $f(x)&#x3D;\frac{d}{dx}g(x)$，则</p>
+<p>$$\int_{a}^{b}f(x)dx&#x3D;\int_{a}^{b}\frac{d}{dx}g(x)dx&#x3D;\int_{a}^{b}dg(x)$$</p>
+<p> 实际上，它告诉我们的是 “将 $g(x)$ 在 $[a,b]$ 的微小变化加和”，即：</p>
+<p>$$\int_{a}^{b}g’(x)dx&#x3D;g(b)-g(a)$$</p>
+<p>根据基本定理，我们要求一个函数 $f(x)$ 的积分，重在知道一个 $g(x)$，使得 $g’(x)&#x3D;f(x)$，因为对于任意合适的 $g(x)$，$[g(x)+c]’&#x3D;f(x)$，所以称 $g(x)+c$ 为 $f(x)$ 的不定积分，其中 $c\in R$.</p>
+<p>比如我们需要求出 </p>
+<p>$$\int_{a}^{b}x^{2}dx$$</p>
+<p>首先我们需要知道 $x^{2}$ 的最简单的不定积分应为 $\frac{1}{3}x^{3}$，因为 $(\frac{1}{3}x^{3})’&#x3D;x^{2}$，则，</p>
+<p>$$\int_{a}^{b}x^{2}dx&#x3D;g(b)-g(a)&#x3D;\frac{1}{3}(b^{3}-a^{3})$$</p>
+<h4 id="8-2-3-算术定理"><a href="#8-2-3-算术定理" class="headerlink" title="8.2.3 算术定理"></a>8.2.3 算术定理</h4><p><strong>1</strong></p>
+<p>$$\int_{a}^{b}[f(x)+g(x)]dx&#x3D;\int_{a}^{b}f(x)dx+\int_{a}^{b}g(x)dx$$</p>
+<p><strong>2</strong></p>
+<p>$$\int_{a}^{b}[kf(x)]dx&#x3D;k\int_{a}^{b}f(x)dx$$</p>
+<p><strong>3</strong></p>
+<p>$$\int_{a}^{b}[f(x)g(x)]’dx&#x3D;f(b)g(b)-f(a)g(a)$$</p>
+<p>$$\int_{a}^{b}[f’(x)g(x)+f(x)g’(x)]dx&#x3D;f(b)g(b)-f(a)g(a)$$</p>
+<p>根据 <strong>1</strong> 有：</p>
+<p>$$\int_{a}^{b}[f’(x)g(x)]+\int_{a}^{b}[f(x)g’(x)]dx&#x3D;f(b)g(b)-f(a)g(a)$$</p>
+<p>移项：</p>
+<p>$$\int_{a}^{b}[f’(x)g(x)]&#x3D;f(b)g(b)-f(a)g(a)-\int_{a}^{b}[f(x)g’(x)]dx$$</p>
+<h4 id="8-2-4-换元法"><a href="#8-2-4-换元法" class="headerlink" title="8.2.4 换元法"></a>8.2.4 换元法</h4><p>$$d[F(u)]&#x3D;d[F(\phi(x)]&#x3D;f[\phi(x)]\phi’(x)dx\rightarrow \int f[\phi(x)]\phi’(x)dx &#x3D; F[\phi(x)] + C &#x3D; [\int f(u)du]_{u&#x3D;\phi(x)}$$</p>
+<p>$$\int f(x) dx &#x3D; [\int f[\phi(t)]\phi’(t)dt]_{t &#x3D; \phi^{-1}(x)}$$</p>
+<h4 id="8-2-5-逆基本定理"><a href="#8-2-5-逆基本定理" class="headerlink" title="8.2.5 逆基本定理"></a>8.2.5 逆基本定理</h4><p>$$\frac{d}{dx}[\int_{a}^{x}f’(x)dx]&#x3D;\frac{d}{dx}[\int_{a}^{x+dx}f’(x)dx-\int_{a}^{x}f’(x)dx]&#x3D;f(x)$$</p>
+<h2 id="9-莫比乌斯函数与莫比乌斯反演"><a href="#9-莫比乌斯函数与莫比乌斯反演" class="headerlink" title="9. 莫比乌斯函数与莫比乌斯反演"></a>9. 莫比乌斯函数与莫比乌斯反演</h2><h3 id="9-1-莫比乌斯函数"><a href="#9-1-莫比乌斯函数" class="headerlink" title="9.1 莫比乌斯函数"></a>9.1 莫比乌斯函数</h3><h4 id="9-1-1-定义"><a href="#9-1-1-定义" class="headerlink" title="9.1.1 定义"></a>9.1.1 定义</h4><p>设 $\mu$ 为莫比乌斯函数，则有：</p>
+<p>$$\mu(x)&#x3D;\begin{cases}1\qquad (n&#x3D;1)\ 0\qquad (∃\ i\ (ki&#x3D;x,k\in Z\rightarrow \sqrt{i}\in Z))\ (-1)^{\sum_{i\in prime}[i\mid x]}\end{cases}$$</p>
+<p>直观地说，只要 $x$ 的某个质因子出现的次数超过一次，则有 $\mu(x)&#x3D;0$，否则，$mu(x)$ 即为 $(-1)^{t}$，其中 $t$ 为 $x$ 的质因数总数.</p>
+<h4 id="9-1-2-性质"><a href="#9-1-2-性质" class="headerlink" title="9.1.2 性质"></a>9.1.2 性质</h4><p>$No.9121$ $\forall (i,j)&#x3D;1\rightarrow\mu(i\times j)&#x3D;\mu(i)\times \mu(j)$</p>
+<p>$$P.9121$$</p>
+<p>若 $\mu(A)&#x3D;1$，则有 $\mu(A)\times \mu(B)&#x3D;1\times \mu(B)&#x3D;\mu(1\times B)$，结果成立</p>
+<p>若 $\mu(A)&#x3D;0$，则有 $\mu(A)\times\mu(B)&#x3D;0$，结果成立</p>
+<p>否则设 $A&#x3D;\prod_{i\in prime}i,B&#x3D;\prod_{j\in prime}j\ (\forall i\neq j)$，则有 $\mu(A)\times\mu(B)&#x3D;\mu(A\times B)$</p>
+<p>$No.9122$ </p>
+<p>$$\sum_{d\mid n}\mu(d)&#x3D;\begin{cases}1\qquad (n&#x3D;1)\0\qquad(n\neq 1)\end{cases}$$</p>
+<p>$$P.9122$$</p>
+<p>$n&#x3D;0$ 时，原式等于 $0$</p>
+<p>$n&#x3D;1$ 时，原式等于 $\mu(1)&#x3D;1$</p>
+<p>否则，设 $n$ 的唯一分解式为 $n&#x3D;\prod_{1\le i\le k}p_{i}^{a_{i}}$，由 $\mu(n)\neq 0$ 知 $\forall a_{i}&#x3D;1$</p>
+<p>显然，$\forall d\mid n$，有 $i$ 个质因子的数 $d$ 有 $C^{i}_{k}$ 种组合情况，每种组合的值为 $(-1)^{i}$，即：</p>
+<p>$$\sum_{d\mid n}\mu(d)&#x3D;\sum_{0\le i\le k}{C^{i}_{k}\times (-1)^{i}}$$</p>
+<p>使用二项式定理转化：</p>
+<p>$$\sum_{d\mid n}\mu(d)&#x3D;(1+(-1))^{k}&#x3D;0^{k}$$</p>
+<p>发现此时在定义域 $(k\neq 0)$ 内恒为 $0$，易知当 $n\gt 1$ 时，$k_{n}\ge 1$，因此 $\mu(n)&#x3D;0$，证毕.</p>
+<h3 id="9-2-莫比乌斯反演"><a href="#9-2-莫比乌斯反演" class="headerlink" title="9.2 莫比乌斯反演"></a>9.2 莫比乌斯反演</h3><h4 id="9-2-1-不完全结论"><a href="#9-2-1-不完全结论" class="headerlink" title="9.2.1 不完全结论"></a>9.2.1 不完全结论</h4><p>设</p>
+<p>$$f(a,b,k)&#x3D;\begin{cases}1\qquad((a,b)&#x3D;k)\0\end{cases}$$</p>
+<p>对于</p>
+<p>$$g(n,m,k)&#x3D;\sum^{n}<em>{i&#x3D;1}\sum^{m}</em>{j&#x3D;1}f(i,j,k)$$</p>
+<p>考虑到</p>
+<p>$$g(n,m,k)&#x3D;\sum^{\lfloor{\frac{n}{k}}\rfloor}<em>{i&#x3D;1}\sum^{\lfloor{\frac{m}{k}}\rfloor}</em>{j-1}f(i,j,1)$$</p>
+<p>根据 $No.9122$ 得出推导式：</p>
+<p>$$\sum_{d\mid (a,b)}\mu(d)&#x3D;\begin{cases}1\qquad ((a,b)&#x3D;1)\0\qquad((a,b)\neq 1)\end{cases}$$</p>
+<p>代入有：</p>
+<p>$$f(i,j,1)&#x3D;\sum_{d\mid (i,j)}\mu(d)$$</p>
+<p>即：</p>
+<p>$$g(n,m,k)&#x3D;\sum^{\lfloor{\frac{n}{k}}\rfloor}<em>{i&#x3D;1}\sum^{\lfloor{\frac{m}{k}}\rfloor}</em>{j-1}&#x3D;\sum_{d\mid (i,j)}\mu(d)$$</p>
+<p>将原式等价转换，可以得到</p>
+<p>$$g(n,m,k)&#x3D;\sum_{d&#x3D;1}\mu(d)\sum^{\lfloor{\frac{n}{k}}\rfloor}<em>{i&#x3D;1}\sum^{\lfloor{\frac{m}{k}}\rfloor}</em>{j-1}h(i,j)$$</p>
+<p>其中</p>
+<p>$$h(i,j)&#x3D;\begin{cases}1\qquad(d\mid i,d\mid j)\0\end{cases}$$</p>
+<p>（可以发现，在这里仅仅是将判断条件与枚举条件互相变换了，而答案是不变的）</p>
+<p>在区间 $[1,\lfloor{\frac{n}{k}}\rfloor]$ 中，满足条件 $d\mid i$ 的 $i$ 有 $\lfloor{\frac{n}{kd}}\rfloor$ 个，因此原式可化为</p>
+<p>$$g(n,m,k)&#x3D;\sum_{d&#x3D;1}\mu(d)\times\lfloor{\frac{n}{kd}}\rfloor\times\lfloor{\frac{m}{kd}}\rfloor$$</p>
+<p>可以证明，当 $d\gt \min(\lfloor{\frac{n}{k}}\rfloor,\lfloor{\frac{m}{k}}\rfloor)$ 时不存在解.</p>
+<h4 id="9-2-2-完全结论"><a href="#9-2-2-完全结论" class="headerlink" title="9.2.2 完全结论"></a>9.2.2 完全结论</h4><p>设两个函数 $f,g$ 满足如下等式：</p>
+<p>$$g(n)&#x3D;\sum_{d\mid n}f(d)$$</p>
+<p>则有：</p>
+<p>$$f(n)&#x3D;\sum_{d\mid n}\mu(d)g(\lfloor{\frac{n}{d}}\rfloor)$$</p>
+<p>特别地：对于莫比乌斯反演还有如下等式：</p>
+<p>设两个函数 $f,g$ 满足如下等式：</p>
+<p>$$g(n)&#x3D;\sum_{n\mid d}f(d)$$</p>
+<p>则有：</p>
+<p>$$f(n)&#x3D;\sum_{n\mid d}\mu(\frac{d}{n})g(d)$$</p>
+<h2 id="10-容斥原理拓展"><a href="#10-容斥原理拓展" class="headerlink" title="10.容斥原理拓展"></a>10.容斥原理拓展</h2><p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/GDOI2018/p/14491894.html"></a></p>
+<h3 id="10-1-二项式反演"><a href="#10-1-二项式反演" class="headerlink" title="10.1 二项式反演"></a>10.1 二项式反演</h3><p>$$P.10.1(1)$$</p>
+<p>设 $U&#x3D;{S_1,S_2,S_3…S_n}$，且任意 $i$ 个元素的交集都相等</p>
+<p>定义 $g(x)$ 为 $x$ 个集合的交集，$f(x)$ 为 $x$ 个集合补集的交集（定义 $f(0)&#x3D;g(0)&#x3D;U$），则：</p>
+<p>$$\mid\bigcap^{n}<em>{i}S</em>{i}\mid&#x3D;\mid U\mid+\sum_{i}{(-1)^{i}\times\mid f(i)\mid}$$</p>
+<p>可知对 $g(i)$，符合要求的 $f(i)$ 组合共有 $C^{i}_{n}$ 种，即原式可以化为：</p>
+<p>$$\mid\bigcap^{n}<em>{i}S</em>{i}\mid&#x3D;\sum^{n}<em>{i}(-1)^{i}C^{i}</em>{n}\mid f(i)\mid$$</p>
+<p>同理有</p>
+<p>$$\mid\bigcap^{n}<em>{i}\complement</em>{U}S_{i}\mid&#x3D;\sum^{n}<em>{i}(-1)^{i}C^{i}</em>{n}\mid g(i)\mid$$</p>
+<p>因为</p>
+<p>$$\mid f(n)\mid&#x3D;\mid\bigcap^{n}<em>{i}\complement</em>{U}S_{i}\mid,\mid g(n)\mid&#x3D;\mid\bigcap^{n}<em>{i}S</em>{i}\mid$$</p>
+<p>因此得出结论：</p>
+<p>$$g(n)&#x3D;\sum^{n}<em>{i&#x3D;0}(-1)^{i}C^{i}</em>{n}f(i)\iff f(n)&#x3D;\sum^{n}<em>{i&#x3D;0}(-1)^{i}C^{i}</em>{n}g(i)$$</p>
+<p>$$P.10.1(2)$$</p>
+<p>因为 </p>
+<p>$$C^{i}<em>{n}\times C^{j}</em>{i}&#x3D;\dfrac{n!}{(n-i)!i!}\times \dfrac{i!}{(i-j)!j!}&#x3D;\dfrac{n!}{(n-j)!j!}\times\dfrac{(n-j)!}{[(n-j)-(n-i)]!(i-j)!}&#x3D;C^{j}<em>{n}\times C^{n-1}</em>{n-j}$$</p>
+<p>因此</p>
+<p>$$\sum^{n}<em>{i&#x3D;j}{(-1)^{i}\times C^{i}</em>{n}\times(-1)^{j}\times C^{j}<em>{i}}&#x3D;C^{j}</em>{n}(-1)^{j}\sum^{n-j}<em>{i&#x3D;0}C^{i}</em>{n-j}&#x3D;C^{j}<em>{n}\times (1-1)^{n-j}&#x3D;C^{j}</em>{n}\times 0^{n-j}$$</p>
+<p>当 $j\neq n$ 时，原式值为 $0$，否则值为 $1$.</p>
+<p>当 $g(n)&#x3D;\sum\limits^{n}<em>{i&#x3D;0}(-1)^{i}C^{i}</em>{n}f(i)\iff f(n)&#x3D;\sum\limits^{n}<em>{i&#x3D;0}(-1)^{i}C^{i}</em>{n}g(i)$ 成立时，可以推知</p>
+<p>$$f(n)&#x3D;\sum^{n}<em>{i&#x3D;0}(-1)^{i}C^{i}</em>{n}&#x3D;\sum^{n}<em>{i&#x3D;0}(-1)^{i}C^{i}</em>{n}\sum^{n}<em>{i&#x3D;j}(-1)^{j}C^{j}</em>{i}f(j)&#x3D;\sum^{n}<em>{j&#x3D;0}f(j)\sum^{n}</em>{i&#x3D;j}{(-1)^{i}\times C^{i}<em>{n}\times(-1)^{j}\times C^{j}</em>{i}}$$</p>
+<p>该式末项 $\sum\limits^{n}<em>{i&#x3D;j}{(-1)^{i}\times C^{i}</em>{n}\times(-1)^{j}\times C^{j}_{i}}$ 已有上述结论，故当 $j\neq n$ 和 $j&#x3D;n$ 时分别带入讨论，发现原式均成立，证毕.</p>
+<p>事实上，二项式反演还有一个更常用的推导式：</p>
+<p>$$g(n)&#x3D;\sum\limits_{i&#x3D;0}^nC^{i}<em>{n}f(i)\iff f(n)&#x3D;\sum\limits</em>{i&#x3D;0}^n(-1)^{n-i}C^{i}_{n}g(i)$$</p>
+<p>根据二项式反演的性质，我们通常会构造一组 ${ f(i),g(i)}$，使得两者之间存在包含关系并且有一者很方便求出，通过反演来快速得到另一者的值.</p>
+<p>二项式反演还有其他形式：</p>
+<p>$$g(n)&#x3D;\sum\limits_{i&#x3D;n}^N(-1)^iC^{i}<em>{n}f(i)\iff f(n)&#x3D;\sum\limits</em>{i&#x3D;n}^N(-1)^{i}C^{i}_{n}g(i)$$</p>
+<p>$$g(n)&#x3D;\sum\limits_{i&#x3D;n}^NC^{i}<em>{n}f(i)\iff f(n)&#x3D;\sum\limits</em>{i&#x3D;n}^N(-1)^{i-n}C^{i}_{n}g(i)$$</p>
+<h3 id="10-2-Min-Max-容斥"><a href="#10-2-Min-Max-容斥" class="headerlink" title="10.2 Min-Max 容斥"></a>10.2 Min-Max 容斥</h3><p>对于满足全序关系并且其中元素满足可加减性的序列 ${x_i}$，设其长度为 $n$，并设 $S&#x3D;{1,2,3,\cdots,n}$ ，则有：</p>
+<p>$$\max_{i\in S}{x_i}&#x3D;\sum_{T\subseteq S}{(-1)^{|T|-1}\min_{j\in T}{x_j}}$$</p>
+<p>$$\min_{i\in S}{x_i}&#x3D;\sum_{T\subseteq S}{(-1)^{|T|-1}\max_{j\in T}{x_j}}$$</p>
+<p>一个常用的实际应用为 Min-Max 容斥的低维版本：$\min(a,b)&#x3D;a+b-\max(a,b)$</p>
+<p>证明略.</p>
+<h3 id="10-3-错位排列"><a href="#10-3-错位排列" class="headerlink" title="10.3 错位排列"></a>10.3 错位排列</h3><p>满足 $\forall i\neq a_{i}$ 的排列被称为错位排列.</p>
+<h4 id="10-3-1-公式"><a href="#10-3-1-公式" class="headerlink" title="10.3.1 公式"></a>10.3.1 公式</h4><p>套用补集的公式，问题变成求 </p>
+<p>$$\left|\bigcup_{i&#x3D;1}^n\overline{S_i}\right|$$</p>
+<p>可以知道，$\overline{S_i}$ 的含义是满足 $P_i&#x3D;i$ 的排列的数量。用容斥原理把问题式子展开，需要对若干个特定的集合的交集求大小，即：</p>
+<p>$$\left|\bigcap_{i&#x3D;1}^{k}S_{a_i}\right|$$</p>
+<p>其中省略了 $a_i&lt;a_{i+1}$ 的条件以方便表示</p>
+<p>上述 $k$ 个集合的交集表示有 $k$ 个变量满足 $P_{a_i}&#x3D;a_i$ 的排列数，而剩下 $n-k$ 个数的位置任意，因此排列数：</p>
+<p>$$\left|\bigcap_{i&#x3D;1}^{k}S_{a_i}\right|&#x3D;(n-k)!$$</p>
+<p>那么选择 $k$ 个元素的方案数为 </p>
+<p>$C^{k}_{n}$，因此有：</p>
+<p>$$\begin{aligned}<br>\left|\bigcup_{i&#x3D;1}^n\overline{S_i}\right|<br>&amp;&#x3D;\sum_{k&#x3D;1}^n(-1)^{k-1}\sum_{a_{1,\cdots,k} }\left|\bigcap_{i&#x3D;1}^{k}S_{a_i}\right|\<br>&amp;&#x3D;\sum_{k&#x3D;1}^n(-1)^{k-1}C^{k}<em>{n}(n-k)!\<br>&amp;&#x3D;\sum</em>{k&#x3D;1}^n(-1)^{k-1}\frac{n!}{k!}\<br>&amp;&#x3D;n!\sum_{k&#x3D;1}^n\frac{(-1)^{k-1} }{k!}<br>\end{aligned}$$</p>
+<p>因此 $n$ 的错位排列数为：</p>
+<p>$$D_n&#x3D;n!-n!\sum_{k&#x3D;1}^n\frac{(-1)^{k-1} }{k!}&#x3D;n!\sum_{k&#x3D;0}^n\frac{(-1)^k}{k!}$$</p>
+<h4 id="10-3-2-递推式"><a href="#10-3-2-递推式" class="headerlink" title="10.3.2 递推式"></a>10.3.2 递推式</h4><p>$$D_{n}&#x3D;(n-1)(D_{n-1}+D_{n-2})$$</p>
+<p>$$D_{n}&#x3D;nD_{n-1}+(-1)^{n})$$</p>
+<p>待证明</p>
+<h3 id="10-4-Catalan-数"><a href="#10-4-Catalan-数" class="headerlink" title="10.4 Catalan 数"></a>10.4 Catalan 数</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1 1 2 5 14 42 132</span><br></pre></td></tr></table></figure>
+
+<p>$$H_n &#x3D; \frac{\binom{2n}{n}}{n+1}$$</p>
+<p>关于 Catalan 数的常见公式：</p>
+<p>$$H_n &#x3D; \begin{cases}<br>    \sum_{i&#x3D;1}^{n} H_{i-1} H_{n-i} &amp; n \geq 2, n \in \mathbf{N_{+}}\<br>    1 &amp; n &#x3D; 0, 1<br>\end{cases}$$</p>
+<p>$$H_n &#x3D; \frac{H_{n-1} (4n-2)}{n+1}$$</p>
+<p>$$H_n &#x3D; C^{n}<em>{2n} - C^{n-1}</em>{2n}$$</p>
+<h2 id="11-初等函数拓展"><a href="#11-初等函数拓展" class="headerlink" title="11.初等函数拓展"></a>11.初等函数拓展</h2><h3 id="11-1-双曲三角函数"><a href="#11-1-双曲三角函数" class="headerlink" title="11.1 双曲三角函数"></a>11.1 双曲三角函数</h3><p>$\sinh x&#x3D;\frac{e^{x}-e^{-x}}{2}$，是奇函数，定义域，值域都是 $R$，在值域内单增</p>
+<p>双曲正弦有两个渐进分别是 $\frac{1}{2}e^{x}(x\rightarrow+\infty),-\frac{1}{2}e^{-x}(x\rightarrow-\infty)$</p>
+<p>$\cosh x&#x3D;\frac{e^{x}+e^{-x}}{2}$，是偶函数，定义域，值域都是 $R$，在 $(-\infty,0]$ 单减，最小值是 $\cosh 0&#x3D;1$</p>
+<p>双曲余弦有两个渐进分别是 $\frac{1}{2}e^{x}(x\rightarrow+\infty),\frac{1}{2}e^{-x}(x\rightarrow-\infty)$</p>
+<p>$\tanh x&#x3D;\frac{\sinh x}{\cosh x}$，这是一个奇函数，定义域和值域同样是 $R$</p>
+<p>有几个比较好的等式：</p>
+<p>$$\sinh (x+y)&#x3D;\sinh x\cosh y+\cosh x\sinh y$$</p>
+<p>$$\sinh (x-y)&#x3D;\sinh x\cosh y-\cosh x\sinh y$$</p>
+<p>$$\cosh (x+y)&#x3D;\cosh x\cosh y-\sinh x\sinh y$$</p>
+<p>$$\cosh (x-y)&#x3D;\cosh x\cosh y+\sinh x\sinh y$$</p>
+<p>证明第一个式子：</p>
+<p>$$\begin{aligned}<br>\sinh x\cosh y+\cosh x\sinh y&amp;&#x3D;<br>\frac{e^{x}-e^{-x}}{2}\times\frac{e^{y}+e^{-y}}{2}+\frac{e^{x}+e^{-x}}{2}\times\frac{e^{y}-e^{-y}}{2}\<br>&amp;&#x3D;\frac{e^{x+y}-e^{y-x}+e^{x-y}-e^{-(x+y)}}{4}+\frac{e^{x+y}+e^{y-x}-e^{x-y}-e^{-(x+y)}}{4}\<br>&amp;&#x3D;\frac{e^{x+y}-e^{-(x+y)}}{2}\<br>&amp;&#x3D;\sinh(x+y)<br>\end{aligned}$$</p>
+<p>剩下的三个式子同理，暴力拆分合并即可</p>
+<p>从这几个式子可以导出一些式子</p>
+<p>$$\cosh^2 x-\sinh^2 x&#x3D;1$$</p>
+<p>可以通过 $\cosh (x-x)&#x3D;\cosh x\cosh x+\sinh x\sinh x$ 推知</p>
+<p>$$\sinh 2x&#x3D;2\sinh x\cosh x$$</p>
+<p>可以通过 $\sinh (x+x)&#x3D;\sinh x\cosh x+\cosh x\sinh x$ 推知</p>
+<p>$$\cosh 2x&#x3D;\cosh^2 x+\sinh^2 x$$</p>
+<p>可以通过 $\cosh (x+x)&#x3D;\cosh x\cosh x-\sinh x\sinh x$ 推知</p>
+<p>从定义还可以导出一些反函数</p>
+<p>$$\operatorname{arcsinh}x&#x3D;\ln(x+\sqrt{x^2+1})$$</p>
+<p>$$\operatorname{arccosh}x&#x3D;\ln(x+\sqrt{x^2-1})$$</p>
+<p>$$\operatorname{arctanh}x&#x3D;\frac{1}{2}\ln\frac{1+x}{1-x}$$</p>
+<h2 id="12-极限"><a href="#12-极限" class="headerlink" title="12.极限"></a>12.极限</h2><p>从这一章开始就是高等数学内容了，我不会系统地按书照抄一遍，只挑一些好的讲讲</p>
+<h3 id="12-1-定义与求法"><a href="#12-1-定义与求法" class="headerlink" title="12.1 定义与求法"></a>12.1 定义与求法</h3><p>设 $\lim_{x\rightarrow x_0}f(x)&#x3D;a$，则 $\forall \varepsilon\gt0,\exist t\in N^+$，当 $x\gt t$ 时，有 $|f(x)-a|\lt \varepsilon$</p>
+<p>同样可以定义左极限和右极限</p>
+<p>左极限：</p>
+<p>右极限：</p>
+<p>一般来说，当 $f(x)$ 在 $x_0$ 处有定义时，$\lim_{x\rightarrow x_0}f(x)&#x3D;f(x_0)$</p>
+<h2 id="aleph-杂项"><a href="#aleph-杂项" class="headerlink" title="$\aleph$. 杂项"></a>$\aleph$. 杂项</h2><h3 id="aleph-1-平方数模意义下的特殊性质"><a href="#aleph-1-平方数模意义下的特殊性质" class="headerlink" title="$\aleph$.1 平方数模意义下的特殊性质"></a>$\aleph$.1 平方数模意义下的特殊性质</h3><p>对于任意 $x\in Z$，都有 $x^{2}\ mod\ 3\neq 2$.</p>
+<p>$$P.\aleph.1$$</p>
+<p>设 $x&#x3D;3k+p\ (k,p\in Z,\ 0\le p\le 2)$</p>
+<p>则有</p>
+<p>$$x^{2}&#x3D;(3k+p)^{2}&#x3D;9k^{2}+6kp+p^{2}$$</p>
+<p>故 </p>
+<p>$$x^{2}\equiv p^{2}\pmod 3$$</p>
+<p>当 $p&#x3D;0$ 时，$x^{2}\ mod\ 3&#x3D;0$</p>
+<p>当 $p&#x3D;1$ 时，$x^{2}\ mod\ 3&#x3D;1$</p>
+<p>当 $p&#x3D;2$ 时，$x^{2}\ mod\ 3&#x3D;4\ mod\ 3&#x3D;1$</p>
+<p>综上，$x^{2}\ mod\ 3\neq 2$</p>
+<h3 id="aleph-2-调和级数的发散性"><a href="#aleph-2-调和级数的发散性" class="headerlink" title="$\aleph$.2 调和级数的发散性"></a>$\aleph$.2 调和级数的发散性</h3><p>证明下述式子：</p>
+<p>$$\sum^{\infty}_{i&#x3D;1}\frac{1}{i}&#x3D;\infty$$</p>
+<p>$$P.\aleph.2$$</p>
+<p>考虑对调和级数进行分组：</p>
+<p>$${\frac{1}{1}}+{\frac{1}{2}}+{\frac{1}{3}+\frac{1}{4}}+{\frac{1}{5}+\frac{1}{6}+\frac{1}{7}+\frac{1}{8}}\gt 1+\frac{1}{2}+\frac{1}{2}+\frac{1}{2}\cdots$$</p>
+<p>以此类推，将区间 $(\frac{1}{2^{k-1}},\frac{1}{2^{k}}]$ 内的数分为一组，共 $2^{k-1}$ 个数，最小数为 $\frac{1}{2^{k}}$，可知其和最小为 $\frac{1}{2^{k}}\times 2^{k-1}&#x3D;\frac{1}{2}$，依次分组，得到的 $\frac{1}{2}$ 也为无限组，即其不收敛</p>
+<h3 id="aleph-3-模意义概率"><a href="#aleph-3-模意义概率" class="headerlink" title="$\aleph$.3 模意义概率"></a>$\aleph$.3 模意义概率</h3><p>设有一分数 $f_{a,b}&#x3D;\frac{a}{b}$，则有 $f_{a,b}\mod p&#x3D;a\times b^{p-2}$</p>
+<p>定理一</p>
+<p>$$(f_{a,b}\times f_{c,d})\mod p&#x3D;(f_{a,b}\mod p)\times (f_{c,d}\mod p)$$</p>
+<p>证明显然，因为 $(a\times b^{p-2})\times (c\times d^{p-2})&#x3D;(a\times c)\times (b\times d)^{p-2}$</p>
+<p>定理二</p>
+<p>$$(1-f_{a,b})\mod p&#x3D;(1-(f_{a,b})\mod p)\mod p$$</p>
+<p>（定义 ${a}\mod p&#x3D;(a+kp)\mod {p}\ (a\lt 0,a+kp\ge 0)$）</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E6%95%B0%E5%AD%A6/" rel="tag"># 数学</a>
+              <a href="/tags/%E7%90%86%E8%AE%BA/" rel="tag"># 理论</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+            </div>
+            <div class="post-nav-item">
+                <a href="/2026/07/01/2026-07-01-%E5%8D%9A%E5%AE%A2%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0/" rel="next" title="博客测试文章">
+                  博客测试文章 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments" id="lv-container" data-id="city" data-uid="vlyWMQonR9LQJCZQpP0d"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2026</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">HaneDaniko</span>
+  </div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/mist/" rel="noopener" target="_blank">NexT.Mist</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+<script src="/js/third-party/comments/livere.js" defer></script>
+
+</body>
+</html>
